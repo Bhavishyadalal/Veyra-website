@@ -468,9 +468,9 @@ svg {
 .ticker-track {
   display: flex;
   width: max-content;
-  animation: marquee 40s linear infinite;
+  animation: marquee 58s linear infinite;
 }
-.ticker-track > span {
+.ticker-group > span {
   display: flex;
   align-items: center;
   gap: 35px;
@@ -484,9 +484,6 @@ svg {
 .ticker svg {
   width: 22px;
   height: 22px;
-}
-.ticker:hover .ticker-track {
-  animation-play-state: paused;
 }
 @keyframes marquee {
   to {
@@ -1983,7 +1980,7 @@ h2 em,
     margin-top: 8px;
     transform: rotate(-3deg);
   }
-  .ticker-track > span {
+  .ticker-group > span {
     font-size: 21px;
     gap: 25px;
     padding-right: 25px;

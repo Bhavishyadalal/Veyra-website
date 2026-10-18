@@ -48,3 +48,7 @@ The 1024 × 500 export is a feature-graphic format, not a claim of app-store app
 Two original AI-generated backgrounds were created for this Veyra campaign on 18 October 2026. Final branding exports use the owner's actual app artwork. Super Malibu embedding and public source redistribution were explicitly authorized by the owner. Other bundled website fonts retain their accompanying font notices in the website source. This media kit is for showcasing Veyra; it does not independently relicense the app icon, trademark or font files. Do not extract a font from these graphics as a separate font distribution.
 
 No obsolete support/UPI artwork is included.
+
+## Continuity artwork
+
+[Full-resolution glass-and-mist panorama](artwork/continuity-mist-source.png) was generated for the website continuity update. The optimized copy is served as `images/continuity-mist.webp` by the website. This additional background is separate from the twelve branded campaign exports listed above.

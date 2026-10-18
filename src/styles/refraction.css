@@ -657,3 +657,212 @@ html[data-motion="reduced"] .download-drive {
   transition: none;
   transform: none;
 }
+
+/* Continuity: matched marquee copies, soft art boundaries, and an ambient field. */
+.universe {
+  position: relative;
+  isolation: isolate;
+}
+.continuity-field {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+.continuity-field > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.26;
+  filter: blur(12px);
+  mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent);
+  -webkit-mask-image: linear-gradient(
+    transparent,
+    #000 18%,
+    #000 82%,
+    transparent
+  );
+}
+.ambient-bloom {
+  position: absolute;
+  width: 48vw;
+  height: 48vw;
+  max-width: 760px;
+  max-height: 760px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    #a9bbc016,
+    #cbb58d09 35%,
+    transparent 70%
+  );
+  filter: blur(22px);
+  animation: atmosphere-drift 22s ease-in-out infinite alternate;
+}
+.bloom-one {
+  right: -12%;
+  top: 2%;
+}
+.bloom-two {
+  left: -20%;
+  bottom: -12%;
+  animation-delay: -11s;
+}
+@keyframes atmosphere-drift {
+  to {
+    transform: translate3d(5%, -8%, 0) scale(1.1);
+  }
+}
+.ticker-track {
+  will-change: transform;
+}
+.ticker-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0 0 auto;
+  min-width: calc(103vw + 2px);
+}
+.ticker-group > span {
+  flex: 0 0 auto;
+}
+.ticker:hover .ticker-track {
+  animation-play-state: running;
+}
+.manifesto {
+  padding-top: clamp(58px, 6vw, 98px);
+  padding-bottom: 50px;
+}
+.obsidian-scene {
+  margin-bottom: 0;
+  min-height: clamp(640px, 53vw, 850px);
+  border-block: 0;
+  background: transparent;
+}
+.obsidian-image {
+  inset: -2% 0;
+  height: 104%;
+  opacity: 0.56;
+  mask-image: linear-gradient(
+    transparent,
+    #000 18%,
+    #000 66%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    transparent,
+    #000 18%,
+    #000 66%,
+    transparent 100%
+  );
+}
+.obsidian-scene::after {
+  background: linear-gradient(
+    90deg,
+    #080a0b99,
+    #080a0b22 40%,
+    #080a0b22 60%,
+    #080a0b99
+  );
+}
+.obsidian-lines {
+  mask-image: linear-gradient(transparent, #000 20%, #000 70%, transparent);
+  -webkit-mask-image: linear-gradient(
+    transparent,
+    #000 20%,
+    #000 70%,
+    transparent
+  );
+}
+.obsidian-bottom {
+  bottom: 58px;
+}
+.scene-bridge {
+  height: 96px;
+  margin-top: -34px;
+  pointer-events: none;
+  position: relative;
+}
+.scene-bridge svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.scene-bridge path {
+  fill: none;
+  stroke: url(#continuity-thread);
+  stroke-width: 1;
+}
+.scene-bridge .thread-base {
+  opacity: 0.28;
+}
+.scene-bridge .thread-pulse {
+  stroke-dasharray: 0.16 0.84;
+  animation: thread-flow 12s linear infinite;
+}
+.scene-bridge .thread-echo {
+  opacity: 0.12;
+  stroke-width: 5;
+  filter: blur(4px);
+}
+@keyframes thread-flow {
+  to {
+    stroke-dashoffset: -1;
+  }
+}
+.details {
+  padding-bottom: clamp(68px, 7vw, 112px);
+}
+.faq {
+  padding-block: clamp(70px, 7vw, 112px);
+}
+@media (max-width: 760px) {
+  .manifesto {
+    padding-top: 56px;
+    padding-bottom: 36px;
+  }
+  .obsidian-scene {
+    min-height: 630px;
+    margin-bottom: 0;
+  }
+  .obsidian-bottom {
+    bottom: 42px;
+  }
+  .scene-bridge {
+    height: 68px;
+    margin-top: -20px;
+  }
+  .continuity-field > img {
+    opacity: 0.2;
+    filter: blur(8px);
+  }
+  .ambient-bloom {
+    width: 90vw;
+    height: 90vw;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-bloom,
+  .thread-pulse,
+  .ticker-track {
+    animation: none !important;
+  }
+}
+
+.obsidian-scene::after,
+.obsidian-light {
+  mask-image: linear-gradient(transparent, #000 18%, #000 66%, transparent);
+  -webkit-mask-image: linear-gradient(
+    transparent,
+    #000 18%,
+    #000 66%,
+    transparent
+  );
+}
+
+[data-motion="reduced"] .scroll-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}

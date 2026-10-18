@@ -153,7 +153,7 @@ body {
   transform: rotate(-1.6deg);
   padding: 23px 0;
 }
-.ticker-track > span {
+.ticker-group > span {
   letter-spacing: 0.025em;
 }
 .ticker svg {

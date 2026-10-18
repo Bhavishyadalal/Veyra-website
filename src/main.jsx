@@ -1,9 +1,17 @@
-import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useContext,
+  lazy,
+  Suspense,
+} from "react";
 import { createRoot } from "react-dom/client";
 import {
   motion,
   AnimatePresence,
   MotionConfig,
+  MotionConfigContext,
   useScroll,
   useTransform,
   useInView,
@@ -122,13 +130,18 @@ function Logo({ large = false }) {
   );
 }
 function Reveal({ children, className = "", delay = 0 }) {
+  const reduced = useContext(MotionConfigContext).reducedMotion === "always";
   return (
     <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 28 }}
+      className={`scroll-reveal ${className}`}
+      initial={reduced ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.12 }}
-      transition={{ duration: 0.65, delay, ease: curve }}
+      viewport={{ once: true, amount: 0.08, margin: "0px 0px 80px 0px" }}
+      transition={{
+        duration: reduced ? 0 : 0.45,
+        delay: reduced ? 0 : delay,
+        ease: curve,
+      }}
     >
       {children}
     </motion.div>
@@ -252,6 +265,16 @@ function App() {
       transition={{ type: "spring", bounce: 0.12, visualDuration: 0.4 }}
     >
       <div className="universe" style={{ "--accent": current.color }}>
+        <div className="continuity-field" aria-hidden="true">
+          <img
+            src="/images/continuity-mist.webp"
+            alt=""
+            decoding="async"
+            loading="lazy"
+          />
+          <span className="ambient-bloom bloom-one" />
+          <span className="ambient-bloom bloom-two" />
+        </div>
         <a className="skip-link" href="#main">
           Skip to content
         </a>
@@ -445,11 +468,15 @@ function App() {
           </section>
           <div className="ticker" aria-hidden="true">
             <div className="ticker-track">
-              {[0, 1, 2, 3].map((i) => (
-                <span key={i}>
-                  STAY CURIOUS <Sparkles /> GO DEEPER <Sparkles /> FEEL
-                  EVERYTHING <Sparkles />{" "}
-                </span>
+              {[0, 1].map((group) => (
+                <div className="ticker-group" key={group}>
+                  {[0, 1, 2, 3].map((copy) => (
+                    <span key={copy}>
+                      STAY CURIOUS <Sparkles /> GO DEEPER <Sparkles /> FEEL
+                      EVERYTHING <Sparkles />
+                    </span>
+                  ))}
+                </div>
               ))}
             </div>
           </div>
@@ -1012,6 +1039,30 @@ function App() {
             </div>
           </section>
           <ObsidianScene reduced={reduced} openPortal={() => setPortal(true)} />
+          <div className="scene-bridge" aria-hidden="true">
+            <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="continuity-thread">
+                  <stop offset="0" stopColor="#d8c5a8" stopOpacity="0" />
+                  <stop offset=".5" stopColor="#eadcc5" stopOpacity=".65" />
+                  <stop offset="1" stopColor="#d8c5a8" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <path
+                className="thread-base"
+                d="M0 95 C420 -30 1030 160 1600 18"
+              />
+              <path
+                className="thread-pulse"
+                pathLength="1"
+                d="M0 95 C420 -30 1030 160 1600 18"
+              />
+              <path
+                className="thread-echo"
+                d="M0 108 C500 -10 1020 176 1600 30"
+              />
+            </svg>
+          </div>
           <section className="details section-shell">
             <Reveal className="details-title">
               <p className="eyebrow">03 / GOOD MUSIC. LESS FRICTION.</p>

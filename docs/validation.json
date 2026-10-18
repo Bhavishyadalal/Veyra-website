@@ -4,7 +4,7 @@
   "typecheck": "passed",
   "productionBuild": "passed",
   "playwright": {
-    "passed": 54,
+    "passed": 58,
     "skipped": 2,
     "failed": 0
   },
@@ -57,5 +57,18 @@
   "generatedCampaignBackgrounds": 2,
   "staticSocialMetadata": "passed, JavaScript disabled",
   "configuredSiteUrlBuild": "passed, four HTML pages",
-  "liveChatPreview": "deferred until public website URL is available"
+  "liveChatPreview": "deferred until public website URL is available",
+  "finalContinuityRecheck": {
+    "passed": 12,
+    "failed": 0
+  },
+  "tickerCoverageWidths": [
+    320,
+    390,
+    1440,
+    1920,
+    3440
+  ],
+  "tickerHoverMotion": "passed",
+  "sceneBoundaryFade": "visually reviewed on desktop and mobile"
 }

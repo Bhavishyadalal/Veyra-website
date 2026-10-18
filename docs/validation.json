@@ -4,8 +4,8 @@
   "typecheck": "passed",
   "productionBuild": "passed",
   "playwright": {
-    "passed": 58,
-    "skipped": 2,
+    "passed": 67,
+    "skipped": 5,
     "failed": 0
   },
   "finalSupportingPageRecheck": {
@@ -70,5 +70,17 @@
     3440
   ],
   "tickerHoverMotion": "passed",
-  "sceneBoundaryFade": "visually reviewed on desktop and mobile"
+  "sceneBoundaryFade": "visually reviewed on desktop and mobile",
+  "customCursor": {
+    "mouseHoverAndControls": "passed",
+    "nativeDialogAndTeardown": "passed",
+    "supportingPages": "passed",
+    "touchExclusion": "passed",
+    "forcedColorsFallback": "passed",
+    "reducedMotionAndKeyboard": "passed"
+  },
+  "copyWebsiteLink": {
+    "success": "passed on both projects",
+    "deniedManualFallback": "passed on both projects"
+  }
 }

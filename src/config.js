@@ -1,5 +1,6 @@
 /** Update the real project links here when publishing a new Android source version. */
 export const siteConfig = Object.freeze({
+  website: "https://veyra-website-mauve.vercel.app/",
   appVersion: "0.1.1",
   repository: "https://github.com/Bhavishyadalal/Veyra",
   driveFolder:

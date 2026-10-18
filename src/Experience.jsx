@@ -134,6 +134,7 @@ export function FrequencyReel({ reduced, moods, onSelect }) {
         <div className="reel-axis" aria-hidden="true" />
         <motion.div
           className="reel-cards"
+          data-cursor={reduced ? undefined : "drag"}
           drag={reduced ? false : "y"}
           dragConstraints={{ top: 0, bottom: 0 }}
           dragElastic={0.16}

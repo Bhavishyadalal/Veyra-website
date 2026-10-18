@@ -1,3 +1,4 @@
+import "./cursor.js";
 import { animate, inView } from "motion";
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
 if (!reduced.matches)

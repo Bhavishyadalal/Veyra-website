@@ -42,6 +42,12 @@ A standalone website for the Veyra Android app, rebuilt around obsidian, smoked 
 
 The phone is an **illustrative web preview inspired by Veyra**, not a running Android app or an actual screenshot. Artwork, tracks and lyric text are original demo content. No audio is streamed or played. Android release links point to GitHub; the source download is an Android Studio project, not an APK.
 
+## Custom cursor and sharing
+
+A locally rendered glass arrow and contextual ring follow mouse input throughout the website, including native image/hidden-scene dialogs. Buttons, drag surfaces, range sliders, text inputs and disabled controls retain appropriate behavior. The decoration never intercepts input, pauses when hidden or using the keyboard, removes following lag with reduced motion, and restores the system cursor in forced colors. Touch layouts do not create it. Source: `src/cursor.js`, `src/styles/cursor.css`, `public/cursors/veyra-arrow.svg`.
+
+The download area includes **Copy website link**. It confirms successful copying, or offers a focused, selected manual-copy field when clipboard access is unavailable. The shared address is the real public website from `src/config.js`.
+
 ## Flow and atmosphere polish
 
 The text ribbon now uses two identical, viewport-filling groups for a continuous loop, including on ultrawide screens. Hover never pauses it; reduced motion still freezes decorative movement. The monolith scene fades at both ends instead of ending in a rectangular edge, with a moving light thread joining the next section. A new locally served generated glass-and-mist panorama, soft blooms and tighter section spacing replace the oversized empty gaps. Reveal text appears earlier while scrolling and immediately in reduced-motion mode.

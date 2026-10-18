@@ -1,3 +1,4 @@
+import "./cursor.js";
 import React, {
   useState,
   useEffect,
@@ -34,6 +35,7 @@ import {
   LayoutGrid,
   Library,
   Download,
+  Copy,
   Folder,
   Plus,
   Users,
@@ -201,7 +203,28 @@ function App() {
   const [liked, setLiked] = useState(false);
   const [elapsed, setElapsed] = useState(17);
   const [toast, setToast] = useState("");
+  const [manualShare, setManualShare] = useState(false);
+  const shareInput = useRef(null);
   const menuButton = useRef(null);
+  useEffect(() => {
+    if (manualShare) {
+      shareInput.current?.focus();
+      shareInput.current?.select();
+    }
+  }, [manualShare]);
+  async function copyWebsiteLink() {
+    try {
+      if (!navigator.clipboard?.writeText)
+        throw new Error("Clipboard unavailable");
+      await navigator.clipboard.writeText(siteConfig.website);
+      setManualShare(false);
+      setToast("Website link copied.");
+    } catch {
+      setManualShare(true);
+      shareInput.current?.focus();
+      shareInput.current?.select();
+    }
+  }
   const { scrollYProgress } = useScroll();
   const artworkY = useTransform(scrollYProgress, [0, 0.2], [0, 170]);
   useEffect(() => {
@@ -1230,6 +1253,28 @@ function App() {
                 <p className="download-note">
                   Two ways to get the app. Source ZIP ≠ APK.
                 </p>
+                <div className="share-frequency">
+                  <button
+                    type="button"
+                    className="share-veyra"
+                    onClick={copyWebsiteLink}
+                  >
+                    <Copy size={16} aria-hidden="true" /> Copy website link
+                  </button>
+                  <span>A good find deserves company.</span>
+                </div>
+                {manualShare && (
+                  <label className="manual-share">
+                    Select and copy the website link
+                    <input
+                      ref={shareInput}
+                      readOnly
+                      value={siteConfig.website}
+                      aria-label="Website link to copy"
+                      onClick={(event) => event.currentTarget.select()}
+                    />
+                  </label>
+                )}
               </div>
               <a
                 className="source-badge"

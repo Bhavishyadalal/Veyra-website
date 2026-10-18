@@ -1,0 +1,118 @@
+@media (any-pointer: fine) and (any-hover: hover) {
+  html.veyra-cursor,
+  html.veyra-cursor *,
+  html.veyra-cursor dialog::backdrop {
+    cursor:
+      url("/cursors/veyra-arrow.svg") 3 3,
+      auto !important;
+  }
+  html.veyra-cursor :is(a, button, summary, [role="button"], [role="tab"]) {
+    cursor:
+      url("/cursors/veyra-arrow.svg") 3 3,
+      pointer !important;
+  }
+  html.veyra-cursor
+    :is(input:not([type="range"]), textarea, [contenteditable="true"]) {
+    cursor: text !important;
+  }
+  html.veyra-cursor :is(input[type="range"], [role="slider"]) {
+    cursor: ew-resize !important;
+  }
+  html.veyra-cursor :is(:disabled, [aria-disabled="true"]) {
+    cursor: not-allowed !important;
+  }
+}
+.veyra-cursor-ring {
+  display: block !important;
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  z-index: 2147483647 !important;
+  pointer-events: none !important;
+  opacity: 0;
+  transition: opacity 120ms;
+  contain: layout style;
+}
+.veyra-cursor-ring.is-visible {
+  opacity: 1;
+}
+.veyra-cursor-ring::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 27px;
+  height: 27px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #e6d5b766;
+  border-radius: 50%;
+  background: #d8c5a803;
+  box-shadow: 0 0 0 1px #080a0b40;
+  transition:
+    width 140ms,
+    height 140ms,
+    border-color 140ms,
+    background 140ms;
+}
+.veyra-cursor-ring[data-state="link"]::before {
+  width: 45px;
+  height: 45px;
+  border-color: #f2e4c8d9;
+  background: #e4d1a710;
+}
+.veyra-cursor-ring[data-state="drag"]::before {
+  width: 58px;
+  height: 58px;
+  border-color: #f2e4c8b3;
+}
+.veyra-cursor-ring[data-state="drag"]::after {
+  content: "↕";
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  color: #f2e4c8;
+  font: 16px/1 sans-serif;
+  text-shadow: 0 1px 3px #000;
+}
+.veyra-cursor-ring[data-state="range"]::before {
+  width: 48px;
+  height: 20px;
+  border-radius: 12px;
+}
+.veyra-cursor-ring[data-state="text"]::before {
+  width: 8px;
+  height: 30px;
+  border-radius: 5px;
+  background: transparent;
+}
+.veyra-cursor-ring[data-state="disabled"]::before {
+  border-style: dashed;
+  opacity: 0.5;
+}
+.veyra-cursor-ring.is-pressed::before {
+  width: 20px;
+  height: 20px;
+  background: #e4d1a725;
+}
+@media (prefers-reduced-motion: reduce) {
+  .veyra-cursor-ring,
+  .veyra-cursor-ring::before {
+    transition: none;
+  }
+}
+[data-motion="reduced"] .veyra-cursor-ring,
+[data-motion="reduced"] .veyra-cursor-ring::before {
+  transition: none;
+}
+@media (forced-colors: active) {
+  .veyra-cursor-ring {
+    display: none !important;
+  }
+}

@@ -168,6 +168,20 @@ test("FAQ and external download links are honest and actionable", async ({
   await expect(
     page.getByRole("link", { name: "Find Android releases", exact: true }),
   ).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/releases");
+  const drive = page.getByRole("link", {
+    name: "Google Drive Alternate APK download",
+    exact: true,
+  });
+  await expect(drive).toHaveAttribute(
+    "href",
+    "https://drive.google.com/drive/folders/1KYJ_1LPy3W5Ax5t4R0mw76Mr8xK9SDuS?usp=sharing",
+  );
+  await expect(drive).toHaveAttribute("target", "_blank");
+  await expect(drive).toHaveAttribute("rel", "noopener noreferrer");
+  await expect(drive).not.toHaveAttribute("download");
+  await expect(page.locator("#drive-download-help")).toContainText(
+    "Opens the APK folder",
+  );
   await expect(
     page.getByRole("link", { name: "Android Studio source ZIP", exact: true }),
   ).toHaveAttribute("href", /\.zip$/);

@@ -52,6 +52,23 @@ import "./styles/base.css";
 import "./styles/atmosphere.css";
 import "./styles/refraction.css";
 import DepthScene from "./DepthScene";
+/** Decorative, locally rendered Google Drive mark; no external icon request. */
+function GoogleDriveIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="26"
+      height="26"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path fill="#0F9D58" d="M8 2 1 14l4 7 7-12Z" />
+      <path fill="#FBBC04" d="M8 2h8l7 12h-8Z" />
+      <path fill="#4285F4" d="M9 14h14l-4 7H5Z" />
+    </svg>
+  );
+}
+
 const FluxLines = lazy(() => import("./components/FluxLines"));
 const curve = [0.22, 1, 0.36, 1];
 const moods = [
@@ -1084,7 +1101,7 @@ function App() {
                 },
                 {
                   q: "Where can I download the Android app?",
-                  a: "Check the GitHub releases page for published builds. The source download below is an Android Studio project, not an installable APK. If no APK is attached to a release, build from source.",
+                  a: "You can check GitHub releases or use the alternate Google Drive folder below. In Drive, open the folder and choose the APK to download. The source ZIP is an Android Studio project, not an installable APK.",
                 },
                 {
                   q: "Can I explore the source?",
@@ -1130,12 +1147,37 @@ function App() {
                   >
                     Find Android releases <ArrowUpRight size={20} />
                   </a>
+                  <a
+                    className="download-drive"
+                    href={siteConfig.driveFolder}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-describedby="drive-download-help"
+                  >
+                    <span className="drive-icon">
+                      <GoogleDriveIcon />
+                    </span>
+                    <span className="drive-copy">
+                      <strong>Google Drive</strong>
+                      <span>Alternate APK download</span>
+                    </span>
+                    <ArrowUpRight
+                      className="drive-arrow"
+                      size={20}
+                      aria-hidden="true"
+                    />
+                  </a>
+                </div>
+                <p className="drive-help" id="drive-download-help">
+                  Opens the APK folder in a new tab. Choose the APK to download.
+                </p>
+                <div className="download-source-row">
                   <a className="source-link" href={siteConfig.sourceZip}>
                     <Download size={17} /> Android Studio source ZIP
                   </a>
                 </div>
                 <p className="download-note">
-                  Release availability is shown on GitHub. Source ZIP ≠ APK.
+                  Two ways to get the app. Source ZIP ≠ APK.
                 </p>
               </div>
               <a

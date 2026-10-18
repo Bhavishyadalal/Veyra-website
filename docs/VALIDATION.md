@@ -50,3 +50,9 @@ Open Graph/Twitter tags are present in initial HTML, including with JavaScript d
 The standalone media gallery also runs directly from a file URL without npm or a server. Media images are provided as ordinary GitHub files in media-kit/ as well as inside both ZIP deliveries.
 
 The managed Chromium policy blocks file:// navigation, so direct double-click execution could not be tested here. The extracted standalone gallery was instead served unchanged over a local HTTP server with JavaScript disabled; all twelve relative image download links returned valid image responses. It contains no module scripts, remote fonts or runtime dependencies.
+
+## Google Drive alternate-download update
+
+Added the owner's supplied Drive folder as an alternate APK download, with a locally rendered three-color icon, a glass button, keyboard focus treatment and explanatory folder/new-tab text. GitHub releases and the source ZIP remain separate options. The FAQ and README describe the folder behavior accurately; no direct APK filename or version is inferred from the folder link.
+
+TypeScript and production build passed. Six targeted browser checks passed across desktop/mobile: download URLs and semantics, responsive overflow, and accessibility across the main preview states. Additional checks at 1440, 390 and 320px verified the download section's exact Drive URL, focusability, minimum touch height, no horizontal overflow and zero axe violations. Screenshots were captured and visually reviewed at desktop/mobile sizes. These checks verify the website link and presentation, not the folder's public permissions or an APK binary download.

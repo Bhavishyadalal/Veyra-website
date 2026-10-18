@@ -42,10 +42,13 @@ A standalone website for the Veyra Android app, rebuilt around obsidian, smoked 
 
 The phone is an **illustrative web preview inspired by Veyra**, not a running Android app or an actual screenshot. Artwork, tracks and lyric text are original demo content. No audio is streamed or played. Android release links point to GitHub; the source download is an Android Studio project, not an APK.
 
+## Android download options
+
+The download section offers GitHub releases and an alternate Google Drive folder, using a local three-color Drive icon and a glass button. The Drive option opens the supplied folder in a new tab so visitors can choose an APK; it is not presented as a direct APK file URL. Update the destination in `src/config.js` → `driveFolder`. Android Studio source remains a separate link.
+
 ## Preview locally
 
 Clone this repository with `git clone https://github.com/Bhavishyadalal/Veyra-website.git`, then `cd Veyra-website`. If using the source ZIP, extract it and enter its `Veyra-Website` folder.
-
 
 Install **Node.js 24 LTS** (minimum 22.12), extract the entire ZIP, then open a terminal in `Veyra-Website`, the folder containing `package.json`:
 

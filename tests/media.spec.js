@@ -18,7 +18,7 @@ test("sharing metadata is present in the initial HTML without JavaScript", async
   await p.goto("http://127.0.0.1:4173/");
   await expect(p.locator('meta[property="og:image"]')).toHaveAttribute(
     "content",
-    /^https:\/\/raw\.githubusercontent\.com\/.*veyra-share-card-v1\.jpg$/,
+    "https://veyra-website-mauve.vercel.app/media-kit/social/veyra-share-card-v1.jpg",
   );
   await expect(p.locator('meta[property="og:image:width"]')).toHaveAttribute(
     "content",
@@ -28,8 +28,14 @@ test("sharing metadata is present in the initial HTML without JavaScript", async
     "content",
     "630",
   );
-  await expect(p.locator("link[rel=canonical]")).toHaveCount(0);
-  await expect(p.locator('meta[property="og:url"]')).toHaveCount(0);
+  await expect(p.locator("link[rel=canonical]")).toHaveAttribute(
+    "href",
+    "https://veyra-website-mauve.vercel.app/",
+  );
+  await expect(p.locator('meta[property="og:url"]')).toHaveAttribute(
+    "content",
+    "https://veyra-website-mauve.vercel.app/",
+  );
   const image = await request.get("/media-kit/social/veyra-share-card-v1.jpg");
   expect(image.headers()["content-type"]).toContain("image/jpeg");
   expect((await image.body()).byteLength).toBeLessThan(300 * 1024);

@@ -1,6 +1,6 @@
 <div align="center">
 
-![Veyra — another dimension](docs/repository-banner.svg)
+[![Veyra — another dimension](docs/repository-banner.svg)](https://veyra-website-mauve.vercel.app/)
 
 # Veyra / Refraction Edition
 
@@ -16,7 +16,7 @@ React · Motion · React Bits · GSAP · Tailwind · Original generated artwork
 
 [Browse the media kit](public/media-kit/README.md). Twelve exports cover link previews, app banners, GitHub social preview, square/story posts, a transparent lockup and browser icons. Two newly generated liquid-glass backgrounds have full-resolution originals. The website footer opens `media.html`, an animated gallery with filters and image previews; `public/media-kit/index.html` also works offline by double-clicking it.
 
-Sharing metadata is emitted into the initial HTML. No website URL is set because this site is not deployed yet. When the address is known, edit **`social.config.mjs` → `siteUrl`**, or set **`SITE_URL`** at build time, then rebuild. Vercel's production-domain variable is supported. Until then, the share image uses the public GitHub media-kit image and canonical/`og:url` are intentionally omitted. A real chat preview still needs a public website; local preview illustrations are not a WhatsApp fetch test.
+Sharing metadata is emitted into the initial HTML and uses the live website address **https://veyra-website-mauve.vercel.app/**. The banner is served at `https://veyra-website-mauve.vercel.app/media-kit/social/veyra-share-card-v1.jpg`; Open Graph, Twitter cards and canonical links point to this domain. If the domain changes, edit `social.config.mjs` → `siteUrl`, or set `SITE_URL` at build time, then rebuild. Messaging apps control their own preview layout and caching.
 
 Editable artboards: `tools/media-artboards.html`. Regenerate with `npm run media:render` (Playwright Chromium required), then `npm run media:gallery` and `npm run build`. The prepared exports work without regeneration.
 

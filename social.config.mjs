@@ -1,6 +1,6 @@
 export const socialSettings = {
-  // Set this to the public HTTPS website URL after deployment, or use SITE_URL.
-  siteUrl: "",
+  // Public website address; SITE_URL can override this for a future domain change.
+  siteUrl: "https://veyra-website-mauve.vercel.app/",
   imagePath: "media-kit/social/veyra-share-card-v1.jpg",
   fallbackImageUrl:
     "https://raw.githubusercontent.com/Bhavishyadalal/Veyra/main/media-kit/social/veyra-share-card-v1.jpg",

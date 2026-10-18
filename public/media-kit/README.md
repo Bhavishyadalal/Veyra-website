@@ -29,7 +29,7 @@ The full website ZIP also includes this folder at `public/media-kit/`. Start the
 
 Use `social/veyra-share-card-v1.jpg` as the Open Graph and Twitter large-image card. It is an optimized 1200 × 630 JPEG with clear branding and safe margins. The website includes its metadata in the initial HTML, so preview crawlers do not need JavaScript.
 
-The website has not been deployed yet. No production domain or canonical address has been invented. Its temporary absolute image URL points to this public GitHub artwork folder. Once the website address is known, set `siteUrl` in `social.config.mjs` to the actual HTTPS address and rebuild. Alternatively set the build environment variable `SITE_URL`. Vercel's production-domain variable is supported automatically. The build then emits the correct canonical address, `og:url` and image address on the website's own domain. The image must stay publicly accessible without login.
+The live website is https://veyra-website-mauve.vercel.app/. The configured sharing image is https://veyra-website-mauve.vercel.app/media-kit/social/veyra-share-card-v1.jpg. The build emits this address along with canonical and `og:url` tags. For a future domain change, edit `siteUrl` in `social.config.mjs` or set the build variable `SITE_URL`, then rebuild. The image must remain publicly accessible without login.
 
 WhatsApp and other apps choose their own preview layout and cache results; local gallery examples are demonstrations. A live WhatsApp fetch can only be checked after the website is public. If the card is changed later, use a new image filename and rebuild to avoid stale image caches.
 

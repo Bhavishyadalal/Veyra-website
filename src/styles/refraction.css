@@ -1,0 +1,554 @@
+@font-face {
+  font-family: Syne;
+  src: url("/fonts/syne.ttf") format("truetype");
+  font-weight: 400 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: Bodoni;
+  src: url("/fonts/bodoni-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+}
+.hero-visual {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 1300px;
+}
+.depth-camera {
+  position: absolute;
+  inset: -2%;
+  transform-origin: 72% 48%;
+  transform-style: preserve-3d;
+}
+.hero-visual .hero-sculpture {
+  z-index: 0;
+  top: 4%;
+  right: -2%;
+  width: 104%;
+  height: 98%;
+  object-position: 65% center;
+}
+.hero-visual .depth-halo {
+  position: absolute;
+  top: 22%;
+  right: 12%;
+  width: 32%;
+  height: 50%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #e9d6a80a, transparent 65%);
+  mix-blend-mode: screen;
+}
+.glass-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+.depth-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #080a0b44, transparent 65%),
+    linear-gradient(0deg, #080a0b, transparent 23%, transparent 80%, #080a0b22);
+  z-index: 3;
+}
+.optical-ring {
+  position: absolute;
+  right: 6%;
+  top: 14%;
+  width: 47%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #dcd7c21c;
+  transform: rotate(-20deg) scaleX(0.78);
+  box-shadow: inset 1px 0 #ffffff06;
+}
+.ring-two {
+  right: 4%;
+  top: 11%;
+  width: 51%;
+  border-style: dashed;
+  border-color: #dcd7c211;
+  transform: rotate(-20deg) scaleX(0.78);
+}
+.glass-lens {
+  position: absolute;
+  border: 1px solid #ffffff47;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 27% 22%,
+    #ffffff66 0%,
+    #ffffff04 18%,
+    #080c1210 53%,
+    #cbd5db10 78%,
+    #e5debc4a 94%,
+    transparent 100%
+  );
+  box-shadow:
+    inset -2px -3px 7px #d5dfed30,
+    inset 1px 2px 3px #fff5,
+    0 8px 24px #0005;
+  z-index: 2;
+  animation: lens-drift 19s ease-in-out infinite alternate;
+}
+.glass-lens:after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 13%;
+  width: 27%;
+  height: 9%;
+  border-radius: 50%;
+  background: #fffffbb3;
+  filter: blur(1px);
+  transform: rotate(-36deg);
+}
+.lens-one {
+  width: 39px;
+  height: 39px;
+  right: 34%;
+  top: 29%;
+  filter: blur(0.3px);
+}
+.lens-two {
+  width: 22px;
+  height: 22px;
+  right: 11%;
+  top: 69%;
+  animation-delay: -8s;
+  animation-duration: 24s;
+  filter: blur(0.6px);
+}
+@keyframes lens-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(11px, -24px, 0);
+  }
+}
+h2,
+.chapter h3,
+.feature-row h3,
+.reel-selected-copy h3 {
+  font-family: Syne, Manrope, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+}
+h2 em,
+.serif-word,
+.chapter h3 em,
+.reel-serif,
+.reel-card-bottom > span {
+  font-family: Bodoni, Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  letter-spacing: -0.045em;
+}
+.manifesto h2 {
+  font-size: clamp(36px, 4.5vw, 74px);
+}
+.manifesto .serif-word {
+  font-size: 1.12em;
+  line-height: 1.12;
+}
+.hero h1 {
+  font-size: clamp(85px, 9.2vw, 150px);
+  letter-spacing: -0.015em;
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+.hero .outline-title {
+  -webkit-text-stroke: 0.8px #e1dfd4;
+  text-shadow: 0 0 40px #e3d8b80b;
+}
+.hero:after {
+  background:
+    linear-gradient(90deg, #080a0b55, transparent 72%),
+    linear-gradient(
+      0deg,
+      #080a0b 0%,
+      transparent 26%,
+      transparent 84%,
+      #080a0b33
+    );
+}
+.hero-bottom {
+  gap: 46px;
+}
+.site-header {
+  border-color: #ffffff2c;
+  box-shadow:
+    inset 0 1px 1px #ffffff36,
+    inset 0 -1px 0 #000,
+    0 15px 70px #0005;
+}
+.site-header .nav a {
+  position: relative;
+}
+.site-header .nav a:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #d8c5a8, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.site-header .nav a:hover:after {
+  transform: scaleX(1);
+}
+.primary-button {
+  box-shadow:
+    inset 0 1px 1px #fff5,
+    inset 0 -1px 1px #0008,
+    0 8px 32px #0005 !important;
+}
+.chapter {
+  border-radius: 18px !important;
+  box-shadow:
+    inset 0 1px 0 #ffffff40,
+    0 -12px 65px #0008 !important;
+}
+.chapter-meta {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ffffff13;
+}
+.chapter-text {
+  max-width: 58%;
+}
+.chapter h3 {
+  font-size: clamp(44px, 5.2vw, 80px);
+  line-height: 1.08;
+  letter-spacing: -0.06em;
+}
+.chapter h3 em {
+  font-size: 1.1em;
+}
+.chapter-number {
+  color: #ffffff26;
+  right: 30px;
+  font-size: 80px;
+}
+.circle-link {
+  box-shadow: inset 0 1px #ffffff24;
+  backdrop-filter: blur(16px);
+}
+.reel-headline {
+  font-family: Syne, Manrope, sans-serif;
+  font-weight: 700;
+}
+.reel-serif {
+  font-size: clamp(64px, 7vw, 110px);
+  line-height: 0.95;
+}
+.reel-card {
+  box-shadow:
+    inset 0 1px 1px #fff6,
+    0 35px 75px #000b;
+}
+.reel-card.is-current {
+  border-color: #e1d9c44d;
+}
+.reel-card-bottom > span {
+  font-size: 35px;
+}
+.reel-selected-copy h3 {
+  font-size: 23px;
+}
+.reel-orbit:before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  border-radius: 50%;
+  border: 1px solid #ffffff07;
+}
+.floating-chip {
+  box-shadow:
+    inset 0 1px 1px #ffffff40,
+    inset 0 -1px #0005,
+    0 10px 45px #0008;
+}
+.phone-stage {
+  perspective: 1200px;
+}
+.phone-orbit:before {
+  content: "";
+  position: absolute;
+  inset: -50px;
+  border-radius: 50%;
+  border: 1px solid #ffffff05;
+  transform: rotateX(18deg);
+}
+.phone {
+  box-shadow:
+    inset 1px 1px 2px #fff4,
+    0 30px 100px #000b,
+    0 0 90px #d8c5a807;
+}
+.feature-row {
+  transition:
+    background 0.3s,
+    border-color 0.3s;
+}
+.feature-row:hover {
+  background: linear-gradient(90deg, #c9d1c203, transparent);
+  border-color: #d8c5a847;
+}
+.feature-row > svg:last-child {
+  transition:
+    transform 0.3s,
+    color 0.3s;
+}
+.feature-row:hover > svg:last-child {
+  transform: translate(3px, -3px);
+  color: #e6dbc5;
+}
+.feature-row h3 {
+  font-size: 22px;
+}
+.obsidian-copy h2 {
+  font-size: clamp(46px, 6vw, 94px);
+}
+.signal-copy h2 {
+  font-size: clamp(47px, 6.2vw, 98px);
+}
+.download-section {
+  background:
+    radial-gradient(ellipse at 90% 5%, #cbb9910f, transparent 55%),
+    linear-gradient(135deg, #202320, #101311);
+}
+.download-section h2 {
+  font-size: clamp(61px, 9vw, 140px);
+  line-height: 1.08;
+}
+.download-section h2 em {
+  font-size: 1.08em;
+}
+.faq h2 {
+  font-size: 40px;
+  letter-spacing: -0.045em;
+}
+.footer-main {
+  padding-top: 10px;
+}
+.portal-message > h2 {
+  font-family: Syne, Manrope, sans-serif;
+  font-size: clamp(48px, 6.6vw, 78px);
+}
+.portal-message > h2 em {
+  font-size: 1.2em;
+}
+.portal-message .resonance {
+  border-color: #ffffff30;
+  box-shadow:
+    inset 0 1px #ffffff30,
+    0 20px 50px #0005;
+}
+.document h1 {
+  font-family: Syne, Manrope, sans-serif;
+}
+@media (max-width: 1100px) {
+  .hero h1 {
+    font-size: 10.5vw;
+  }
+  .chapter-text {
+    max-width: 65%;
+  }
+  .chapter h3 {
+    font-size: 5.5vw;
+  }
+  .feature-row h3 {
+    font-size: 19px;
+  }
+}
+@media (max-width: 760px) {
+  .hero-visual .hero-sculpture {
+    top: 55px;
+    right: -60%;
+    width: 172%;
+    height: 540px;
+    max-width: none;
+    object-position: 65% center;
+  }
+  .depth-camera {
+    inset: 0;
+  }
+  .depth-vignette {
+    background:
+      linear-gradient(0deg, #080a0b 22%, transparent 63%),
+      linear-gradient(90deg, #080a0b22, transparent 80%);
+  }
+  .hero h1 {
+    font-size: 13.3vw;
+    line-height: 1.09;
+  }
+  .hero-copy {
+    margin-top: 205px;
+  }
+  .hero:after {
+    background: linear-gradient(
+      0deg,
+      #080a0b 10%,
+      #080a0b22 55%,
+      transparent 90%
+    );
+  }
+  .hero-bottom {
+    gap: 22px;
+  }
+  .lens-one {
+    right: 25%;
+    top: 27%;
+    width: 25px;
+    height: 25px;
+  }
+  .lens-two {
+    right: 8%;
+    top: 57%;
+    width: 16px;
+    height: 16px;
+  }
+  .optical-ring {
+    top: 18%;
+    right: -45%;
+    width: 110%;
+  }
+  .ring-two {
+    right: -49%;
+    top: 16%;
+    width: 117%;
+  }
+  .manifesto h2 {
+    font-size: clamp(32px, 7.9vw, 59px);
+  }
+  .manifesto .serif-word {
+    font-size: 1.19em;
+  }
+  .chapter-text {
+    max-width: 89%;
+    left: 25px;
+  }
+  .chapter-lyrics .chapter-text {
+    max-width: 90%;
+  }
+  .chapter h3 {
+    font-size: clamp(36px, 9.1vw, 61px);
+    line-height: 1.1;
+  }
+  .chapter h3 em {
+    font-size: 1.12em;
+  }
+  .chapter-meta {
+    font-size: 6px;
+    padding-bottom: 14px;
+  }
+  .chapter-number {
+    font-size: 58px;
+    right: 23px;
+    bottom: 28px;
+  }
+  .lab h2 {
+    font-size: clamp(43px, 11vw, 70px);
+  }
+  .lab h2 em {
+    font-size: 1.1em;
+  }
+  .reel-headline {
+    font-size: clamp(38px, 9.3vw, 69px);
+  }
+  .reel-serif {
+    font-size: clamp(58px, 13vw, 90px);
+  }
+  .reel-selected-copy h3 {
+    font-size: 20px;
+  }
+  .reel-card-bottom > span {
+    font-size: 31px;
+  }
+  .details-title h2 {
+    font-size: clamp(32px, 8vw, 58px);
+  }
+  .feature-row h3 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .obsidian-copy h2 {
+    font-size: clamp(33px, 8.2vw, 65px);
+  }
+  .signal-copy h2 {
+    font-size: clamp(39px, 9.6vw, 65px);
+  }
+  .faq h2 {
+    font-size: 31px;
+  }
+  .download-section h2 {
+    font-size: clamp(45px, 11vw, 80px);
+  }
+  .download-section h2 em {
+    font-size: 1.15em;
+  }
+  .portal-message > h2 {
+    font-size: 52px;
+  }
+  .document h1 {
+    font-size: 39px;
+    line-height: 1.15;
+  }
+  .document h2 {
+    font-size: 23px;
+  }
+  .glass-dock nav > a {
+    font-family: Manrope, sans-serif;
+  }
+}
+@media (max-width: 359px) {
+  .hero-copy {
+    margin-top: 175px;
+  }
+  .hero-visual .hero-sculpture {
+    right: -70%;
+    height: 500px;
+  }
+  .hero h1 {
+    font-size: 13.1vw;
+  }
+  .chapter h3 {
+    font-size: 9vw;
+  }
+  .feature-row h3 {
+    font-size: 15px;
+  }
+  .portal-message > h2 {
+    font-size: 46px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glass-lens {
+    animation: none;
+  }
+  .feature-row,
+  .feature-row > svg:last-child,
+  .site-header .nav a:after {
+    transition: none;
+  }
+}
+[data-motion="reduced"] .glass-lens {
+  animation: none !important;
+}
+[data-depth="still"] .depth-camera {
+  transform: none !important;
+}

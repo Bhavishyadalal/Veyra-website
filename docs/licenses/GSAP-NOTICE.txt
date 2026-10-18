@@ -1,0 +1,14 @@
+GSAP and @gsap/react
+
+Installed versions: gsap 3.15.0; @gsap/react 2.1.2.
+The package metadata identifies the license as:
+"Standard 'no charge' license: https://gsap.com/standard-license."
+@gsap/react metadata: "SEE LICENSE AT https://gsap.com/standard-license".
+
+The applicable GSAP Standard license is provided by its publisher at:
+https://gsap.com/standard-license
+
+These packages are not covered by the original website's MIT license.
+The official React Bits SplitText component imports GSAP, ScrollTrigger,
+GSAP SplitText and @gsap/react. Source and copyright notices distributed
+by the packages remain applicable. No GSAP source was relicensed as MIT.

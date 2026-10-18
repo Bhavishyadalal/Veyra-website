@@ -1,0 +1,61 @@
+{
+  "websiteVersion": "4.1.0",
+  "date": "2026-10-18",
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "playwright": {
+    "passed": 54,
+    "skipped": 2,
+    "failed": 0
+  },
+  "finalSupportingPageRecheck": {
+    "passed": 2,
+    "failed": 0
+  },
+  "browser": "Chromium 154.0.8037.57",
+  "projects": [
+    "desktop 1440x1000",
+    "Pixel 7 emulation 390x844"
+  ],
+  "widthsWithoutHorizontalOverflow": [
+    320,
+    360,
+    390,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "axeStates": [
+    "Home",
+    "Player",
+    "Lyrics",
+    "Library",
+    "initial hidden dialog",
+    "unlocked archive",
+    "reel and glass dock",
+    "privacy",
+    "credits",
+    "media gallery"
+  ],
+  "firstAndRepeatVisitBrowserCheck": "passed",
+  "reelMouseAndTouchGestureChecks": "passed",
+  "paidVerticalReelSourceInstalled": false,
+  "physicalDevicesTested": false,
+  "safariFirefoxTested": false,
+  "deployed": false,
+  "androidChanged": false,
+  "apkRelease": "deferred by user",
+  "freshArchiveInstall": "passed",
+  "freshArchiveTypecheck": "passed",
+  "freshArchiveProductionBuild": "passed",
+  "freshArchiveDevBrowserSmoke": "passed",
+  "particleMotionAndReducedMotion": "passed",
+  "pointerCameraWithStableHeadline": "passed",
+  "newTypefaceLoadingAndHeadlineFit": "passed",
+  "mediaExports": 12,
+  "generatedCampaignBackgrounds": 2,
+  "staticSocialMetadata": "passed, JavaScript disabled",
+  "configuredSiteUrlBuild": "passed, four HTML pages",
+  "liveChatPreview": "deferred until public website URL is available"
+}

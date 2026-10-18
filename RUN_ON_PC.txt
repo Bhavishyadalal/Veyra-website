@@ -1,0 +1,30 @@
+VEYRA WEBSITE 4.0 — LOCAL PREVIEW
+
+1. Install Node.js 24 LTS from https://nodejs.org
+2. Extract the entire ZIP. Do not run it inside the ZIP viewer.
+3. Open the Veyra-Website folder containing package.json.
+4. On Windows, double-click START-WEBSITE.cmd.
+
+Or open Command Prompt / PowerShell / Terminal in that folder and run:
+
+npm ci --include=dev
+npm run dev
+
+Open the local address printed by Vite. Keep the terminal open.
+Press Ctrl+C to stop. Do not double-click index.html.
+
+If Windows says 'vite is not recognized', dependencies have not been installed:
+run npm ci --include=dev in the folder containing package.json, then npm run dev.
+You do not need to install Vite globally.
+
+PRODUCTION PREVIEW
+npm run build
+npm run preview
+
+VERCEL (after reviewing locally)
+Push the contents of Veyra-Website to your new website repository.
+Import that repository into Vercel. Framework: Vite.
+Build command: npm run build. Output directory: dist.
+The ZIP itself is not the Vercel project; upload/extract its contents first.
+
+No APK is included. This is the standalone website source.

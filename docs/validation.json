@@ -82,5 +82,13 @@
   "copyWebsiteLink": {
     "success": "passed on both projects",
     "deniedManualFallback": "passed on both projects"
+  },
+  "cursorRedesignRecheck": {
+    "passed": 13,
+    "skipped": 3,
+    "failed": 0,
+    "design": "obsidian/platinum arrow, corner brackets, directional drag badge",
+    "positioning": "direct, event-driven",
+    "visualReview": "actual SVG/CSS study at 3x magnification"
   }
 }

@@ -2,7 +2,6 @@ import "./styles/cursor.css";
 
 // The native SVG stays precise; a decorative ring follows without intercepting input.
 const fine = matchMedia("(any-pointer: fine) and (any-hover: hover)");
-const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 const contrast = matchMedia("(forced-colors: active)");
 let dispose;
 function update() {
@@ -22,7 +21,6 @@ function update() {
     y = 0,
     targetX = 0,
     targetY = 0;
-  const quiet = () => reduced.matches || root.dataset.motion === "reduced";
   function hide() {
     pressed = false;
     visible = false;
@@ -33,12 +31,9 @@ function update() {
   function draw() {
     frame = 0;
     if (!visible) return;
-    const amount = quiet() ? 1 : 0.3;
-    x += (targetX - x) * amount;
-    y += (targetY - y) * amount;
+    x = targetX;
+    y = targetY;
     ring.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-    if (Math.abs(targetX - x) + Math.abs(targetY - y) > 0.15)
-      frame = requestAnimationFrame(draw);
   }
   function locate(event) {
     if (event.pointerType !== "mouse") {

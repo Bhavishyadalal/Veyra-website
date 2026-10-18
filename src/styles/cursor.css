@@ -44,71 +44,84 @@
 }
 .veyra-cursor-ring::before {
   content: "";
-  display: block;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 27px;
-  height: 27px;
+  left: 10px;
+  top: 12px;
+  width: 30px;
+  height: 34px;
   transform: translate(-50%, -50%);
-  border: 1px solid #e6d5b766;
-  border-radius: 50%;
-  background: #d8c5a803;
-  box-shadow: 0 0 0 1px #080a0b40;
+  border: 0;
+  border-radius: 0;
+  opacity: 0;
+  color: #e3ebf1;
+  background:
+    linear-gradient(currentColor, currentColor) left top / 7px 1px,
+    linear-gradient(currentColor, currentColor) left top / 1px 7px,
+    linear-gradient(currentColor, currentColor) right top / 7px 1px,
+    linear-gradient(currentColor, currentColor) right top / 1px 7px,
+    linear-gradient(currentColor, currentColor) left bottom / 7px 1px,
+    linear-gradient(currentColor, currentColor) left bottom / 1px 7px,
+    linear-gradient(currentColor, currentColor) right bottom / 7px 1px,
+    linear-gradient(currentColor, currentColor) right bottom / 1px 7px;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 1px 1px #080a0bcc);
   transition:
-    width 140ms,
-    height 140ms,
-    border-color 140ms,
-    background 140ms;
+    width 150ms ease,
+    height 150ms ease,
+    opacity 150ms ease;
 }
 .veyra-cursor-ring[data-state="link"]::before {
-  width: 45px;
-  height: 45px;
-  border-color: #f2e4c8d9;
-  background: #e4d1a710;
+  width: 38px;
+  height: 42px;
+  opacity: 0.85;
 }
 .veyra-cursor-ring[data-state="drag"]::before {
-  width: 58px;
-  height: 58px;
-  border-color: #f2e4c8b3;
+  width: 38px;
+  height: 44px;
+  opacity: 0.45;
+}
+.veyra-cursor-ring::after {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 0;
+  width: 22px;
+  height: 34px;
+  border: 1px solid #d9e3ed55;
+  border-radius: 11px;
+  background: #11181ee8
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='30' viewBox='0 0 20 30'%3E%3Cpath d='m6 9 4-4 4 4M10 5v20m-4-4 4 4 4-4' fill='none' stroke='%23edf3f7' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    center / 20px 30px no-repeat;
+  opacity: 0;
+  transform: translateY(3px);
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease;
 }
 .veyra-cursor-ring[data-state="drag"]::after {
-  content: "↕";
-  position: absolute;
-  left: 15px;
-  top: 8px;
-  color: #f2e4c8;
-  font: 16px/1 sans-serif;
-  text-shadow: 0 1px 3px #000;
+  opacity: 1;
+  transform: translateY(0);
 }
-.veyra-cursor-ring[data-state="range"]::before {
-  width: 48px;
-  height: 20px;
-  border-radius: 12px;
-}
-.veyra-cursor-ring[data-state="text"]::before {
-  width: 8px;
-  height: 30px;
-  border-radius: 5px;
-  background: transparent;
-}
+.veyra-cursor-ring[data-state="text"]::before,
+.veyra-cursor-ring[data-state="range"]::before,
 .veyra-cursor-ring[data-state="disabled"]::before {
-  border-style: dashed;
-  opacity: 0.5;
+  opacity: 0;
 }
 .veyra-cursor-ring.is-pressed::before {
-  width: 20px;
-  height: 20px;
-  background: #e4d1a725;
+  width: 27px;
+  height: 31px;
+  opacity: 0.95;
 }
 @media (prefers-reduced-motion: reduce) {
   .veyra-cursor-ring,
-  .veyra-cursor-ring::before {
+  .veyra-cursor-ring::before,
+  .veyra-cursor-ring::after {
     transition: none;
   }
 }
 [data-motion="reduced"] .veyra-cursor-ring,
-[data-motion="reduced"] .veyra-cursor-ring::before {
+[data-motion="reduced"] .veyra-cursor-ring::before,
+[data-motion="reduced"] .veyra-cursor-ring::after {
   transition: none;
 }
 @media (forced-colors: active) {

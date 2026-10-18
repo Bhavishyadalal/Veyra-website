@@ -90,5 +90,15 @@
     "design": "obsidian/platinum arrow, corner brackets, directional drag badge",
     "positioning": "direct, event-driven",
     "visualReview": "actual SVG/CSS study at 3x magnification"
+  },
+  "glassCursorRecheck": {
+    "date": "2026-10-18",
+    "build": "passed",
+    "passed": 13,
+    "skipped": 3,
+    "failed": 0,
+    "scope": "Cursor, clipboard, production asset loading and supporting-page accessibility; desktop Chromium and mobile Chromium emulation. Mouse-only cases skipped on mobile.",
+    "design": "Pearl point with a compact glass lens, expanded hover lens and vertical drag capsule; exact positioning.",
+    "visualReview": "docs/cursor-lens-study.png (actual SVG and CSS rendered at 3x magnification)"
   }
 }

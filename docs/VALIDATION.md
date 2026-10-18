@@ -82,3 +82,12 @@ TypeScript and production build passed. Full Playwright run: **67 passed, 5 devi
 Replaced the warm kite-shaped pointer and trailing circular ring with a defined obsidian-and-platinum arrow, a beveled edge, small contextual corner brackets and a compact SVG directional badge over draggable content. Default pointing has no follower circle. Direct pointer positioning replaces smoothing/settling, so the decoration schedules only an event-driven frame. Existing input/slider/disabled affordances, native-dialog support, keyboard hiding, touch exclusion, forced-color fallback and reduced-motion transitions remain.
 
 Production build passed. Thirteen targeted desktop/mobile browser checks passed, with three mouse-only scenarios skipped in touch emulation. Checks cover cursor content/control hover, actual clicks, drag affordance, reduced motion, keyboard hiding, hidden-scene/gallery dialog layering and removal, supporting pages, forced colors, clipboard success/fallback and page runtime/assets. The supporting-page accessibility checks also pass. A design study rendered the actual SVG and CSS states at 3× magnification for visual inspection: docs/cursor-redesign-study.png. These are Chromium checks; physical-device and Safari/Firefox validation remains unrun.
+
+
+## Glass cursor redesign — 18 October 2026
+
+Replaced the arrow and corner brackets with a centered pearl point and translucent glass lens. The lens expands on controls, becomes a vertical capsule on draggable surfaces, and compresses on press. Removed the unused arrow asset. Native text, resize and disabled cursors remain available; forced colors uses the system cursor, and touch devices create no overlay.
+
+Production build passed. Targeted Playwright checks completed with **13 passed, 3 mouse-only cases skipped on mobile, 0 failed**. Coverage includes precise movement, click-through, reduced motion, keyboard dismissal, dialog reparenting, supporting pages, forced colors, clipboard fallback, asset loading and supporting-page accessibility. This is a targeted recheck, not a fresh full-suite run.
+
+Rendered and inspected `cursor-lens-study.png` using the actual SVG and stylesheet at 3× magnification. Native cursors are not captured in browser screenshots, so the study composites the native SVG above the decorative layer at the matching hotspot.

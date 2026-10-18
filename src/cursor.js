@@ -1,6 +1,6 @@
 import "./styles/cursor.css";
 
-// The native SVG stays precise; a decorative ring follows without intercepting input.
+// A native pearl point stays precise; the glass lens never intercepts input.
 const fine = matchMedia("(any-pointer: fine) and (any-hover: hover)");
 const contrast = matchMedia("(forced-colors: active)");
 let dispose;
@@ -110,7 +110,7 @@ function update() {
   });
   const image = new Image();
   image.onload = () => root.classList.add("veyra-cursor");
-  image.src = "/cursors/veyra-arrow.svg";
+  image.src = "/cursors/veyra-point.svg";
   document.addEventListener("pointermove", locate, { passive: true });
   document.addEventListener("pointerdown", down, { passive: true });
   document.addEventListener("pointerup", up, { passive: true });

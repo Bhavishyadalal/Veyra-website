@@ -23,7 +23,7 @@ test("custom cursor follows content and controls without intercepting input", as
   await motion.hover();
   await expect(ring).toHaveAttribute("data-state", "link");
   expect(await motion.evaluate((el) => getComputedStyle(el).cursor)).toContain(
-    "veyra-arrow.svg",
+    "veyra-point.svg",
   );
   await motion.click();
   await expect(page.locator("html")).toHaveAttribute("data-motion", "reduced");

@@ -44,7 +44,7 @@ The phone is an **illustrative web preview inspired by Veyra**, not a running An
 
 ## Custom cursor and sharing
 
-A locally rendered obsidian-and-platinum arrow with a beveled edge follows mouse input precisely. Small corner brackets frame interactive targets, and a compact directional badge identifies draggable artwork. There is no trailing circle. The cursor works throughout the website, including native image/hidden-scene dialogs. Buttons, drag surfaces, range sliders, text inputs and disabled controls retain appropriate behavior. The decoration never intercepts input, pauses when hidden or using the keyboard, uses direct positioning without following lag and respects reduced motion, and restores the system cursor in forced colors. Touch layouts do not create it. Source: `src/cursor.js`, `src/styles/cursor.css`, `public/cursors/veyra-arrow.svg`.
+A small pearl point sits inside a translucent glass lens, with a soft specular highlight that matches the site's artwork. The lens expands over buttons, stretches vertically over draggable artwork, and compresses on press. Movement is exact, with no trailing animation. It works throughout the site, including native dialogs; text fields, sliders and disabled controls retain their familiar cursors. Decorations never intercept input. Reduced motion removes transitions, forced colors restores the system cursor, and touch layouts do not create a cursor overlay. Source: `src/cursor.js`, `src/styles/cursor.css`, `public/cursors/veyra-point.svg`.
 
 The download area includes **Copy website link**. It confirms successful copying, or offers a focused, selected manual-copy field when clipboard access is unavailable. The shared address is the real public website from `src/config.js`.
 

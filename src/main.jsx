@@ -1300,8 +1300,13 @@ function App() {
               Back to the surface <ArrowUpRight size={19} />
             </a>
           </div>
+          <p className="footer-credit">
+            Made by{" "}
+            <a href="https://github.com/Bhavishyadalal">
+              Bhavishya Dalal <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
+          </p>
           <div className="footer-bottom">
-            <span>AN INDEPENDENT PROJECT BY BHAVISHYA DALAL</span>
             <div>
               <a href="./privacy.html">Website privacy</a>
               <a href="./credits.html">Credits</a>

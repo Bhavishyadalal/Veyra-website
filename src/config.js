@@ -21,5 +21,6 @@ export const siteConfig = Object.freeze({
   previewSourceZip,
   previewChecksum: `${previewSourceZip}.sha256`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/BUILD-WARNINGS-${previewVersion}.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

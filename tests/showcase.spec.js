@@ -195,6 +195,8 @@ test("FAQ and external download links are honest and actionable", async ({
   await expect(page.getByRole("link", { name: "Preview change notes", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/RELEASE_NOTES_0.1.6-beta1.md");
   await expect(page.locator(".source-track-preview")).toContainText("for testing");
+  await expect(page.getByRole("link", { name: "Preview build notes", exact: true }))
+    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/verification/BUILD-WARNINGS-0.1.6-beta1.md");
   await expect(page.locator(".download-note")).toContainText("not installable APKs");
 });
 test("mobile navigation opens, closes and restores keyboard focus", async ({

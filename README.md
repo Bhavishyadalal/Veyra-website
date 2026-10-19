@@ -25,6 +25,10 @@ push corresponding website updates. See [the maintenance rules](AGENTS.md).
 The source links were checked against the actual app Git branch trees; APK
 availability and the Google Drive folder's current contents were not verified.
 
+The preview source also links its [build-log review](https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/verification/BUILD-WARNINGS-0.1.6-beta1.md),
+which describes compiler/API cleanup, targeted regression checks and the remaining
+full Android build limitation. This is a refreshed source package, not a new APK release.
+
 ## New: coordinated artwork and sharing cards
 
 [Browse the media kit](public/media-kit/README.md). Twelve exports cover link previews, app banners, GitHub social preview, square/story posts, a transparent lockup and browser icons. Two newly generated liquid-glass backgrounds have full-resolution originals. The website footer opens `media.html`, an animated gallery with filters and image previews; `public/media-kit/index.html` also works offline by double-clicking it.

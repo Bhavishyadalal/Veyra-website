@@ -1,11 +1,25 @@
-/** Update the real project links here when publishing a new Android source version. */
+/** Keep stable and preview source tracks separate; APK publication is independent. */
+const repository = "https://github.com/Bhavishyadalal/Veyra";
+const appVersion = "0.1.5";
+const previewVersion = "0.1.6-beta1";
+const previewBranch = `preview/${previewVersion}`;
+const sourceZip = `${repository}/raw/refs/heads/main/downloads/Veyra_Android_Source_${appVersion}_Stable.zip`;
+const previewSourceZip = `${repository}/raw/refs/heads/${previewBranch}/downloads/Veyra_Android_Source_${previewVersion}.zip`;
+
 export const siteConfig = Object.freeze({
   website: "https://veyra-website-mauve.vercel.app/",
-  appVersion: "0.1.1",
-  repository: "https://github.com/Bhavishyadalal/Veyra",
+  appVersion,
+  previewVersion,
+  repository,
+  creator: "https://github.com/Bhavishyadalal",
+  websiteRepository: "https://github.com/Bhavishyadalal/Veyra-website",
   driveFolder:
     "https://drive.google.com/drive/folders/1KYJ_1LPy3W5Ax5t4R0mw76Mr8xK9SDuS?usp=sharing",
-  releases: "https://github.com/Bhavishyadalal/Veyra/releases",
-  sourceZip:
-    "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/downloads/Veyra_Android_Source_0.1.3_Stable.zip",
+  releases: `${repository}/releases`,
+  sourceZip,
+  sourceChecksum: `${sourceZip}.sha256`,
+  previewSourceZip,
+  previewChecksum: `${previewSourceZip}.sha256`,
+  previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
+  sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

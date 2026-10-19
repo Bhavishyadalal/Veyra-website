@@ -382,7 +382,7 @@ function App() {
               <span>
                 <i /> AN INDEPENDENT MUSIC EXPERIENCE
               </span>
-              <span>ANDROID / V.{siteConfig.appVersion}</span>
+              <span>ANDROID / STABLE SOURCE {siteConfig.appVersion}</span>
             </div>
             <div className="hero-copy">
               <motion.p
@@ -1244,14 +1244,32 @@ function App() {
                 </div>
                 <p className="drive-help" id="drive-download-help">
                   Opens the APK folder in a new tab. Choose the APK to download.
+                  {" "}Check its filename for the version.
                 </p>
                 <div className="download-source-row">
-                  <a className="source-link" href={siteConfig.sourceZip}>
-                    <Download size={17} /> Android Studio source ZIP
-                  </a>
+                  <div className="source-track">
+                    <span className="source-track-label">Stable {siteConfig.appVersion}</span>
+                    <div className="source-track-links">
+                      <a className="source-link" href={siteConfig.sourceZip}>
+                        <Download size={17} aria-hidden="true" /> Android Studio source ZIP
+                      </a>
+                      <a href={siteConfig.sourceChecksum} aria-label="Stable source SHA-256 checksum">SHA-256</a>
+                    </div>
+                  </div>
+                  <div className="source-track source-track-preview">
+                    <span className="source-track-label">Preview · for testing</span>
+                    <div className="source-track-links">
+                      <a className="source-link" href={siteConfig.previewSourceZip}>
+                        <Download size={17} aria-hidden="true" /> Preview {siteConfig.previewVersion} source ZIP
+                      </a>
+                      <a href={siteConfig.previewChecksum} aria-label="Preview source SHA-256 checksum">SHA-256</a>
+                      <a href={siteConfig.previewNotes}>Preview change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
+                    </div>
+                  </div>
                 </div>
                 <p className="download-note">
-                  Two ways to get the app. Source ZIP ≠ APK.
+                  Source ZIPs open in Android Studio; they are not installable APKs.
+                  {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>
                 <div className="share-frequency">
                   <button
@@ -1302,7 +1320,7 @@ function App() {
           </div>
           <p className="footer-credit">
             Made by{" "}
-            <a href="https://github.com/Bhavishyadalal">
+            <a href={siteConfig.creator}>
               Bhavishya Dalal <ArrowUpRight size={18} aria-hidden="true" />
             </a>
           </p>
@@ -1313,6 +1331,9 @@ function App() {
               <a href="./media.html">Media kit</a>
               <a href={siteConfig.repository}>
                 GitHub <ArrowUpRight size={13} />
+              </a>
+              <a href={siteConfig.websiteRepository}>
+                Website source <ArrowUpRight size={13} />
               </a>
             </div>
             <span>LISTEN A LITTLE DIFFERENT.</span>

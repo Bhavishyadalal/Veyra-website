@@ -184,7 +184,18 @@ test("FAQ and external download links are honest and actionable", async ({
   );
   await expect(
     page.getByRole("link", { name: "Android Studio source ZIP", exact: true }),
-  ).toHaveAttribute("href", /\.zip$/);
+  ).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/downloads/Veyra_Android_Source_0.1.5_Stable.zip");
+  await expect(page.locator(".source-track").first()).toContainText("Stable 0.1.5");
+  await expect(page.getByRole("link", { name: "Preview 0.1.6-beta1 source ZIP", exact: true }))
+    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.6-beta1/downloads/Veyra_Android_Source_0.1.6-beta1.zip");
+  await expect(page.getByRole("link", { name: "Stable source SHA-256 checksum", exact: true }))
+    .toHaveAttribute("href", /0\.1\.5_Stable\.zip\.sha256$/);
+  await expect(page.getByRole("link", { name: "Preview source SHA-256 checksum", exact: true }))
+    .toHaveAttribute("href", /0\.1\.6-beta1\.zip\.sha256$/);
+  await expect(page.getByRole("link", { name: "Preview change notes", exact: true }))
+    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/RELEASE_NOTES_0.1.6-beta1.md");
+  await expect(page.locator(".source-track-preview")).toContainText("for testing");
+  await expect(page.locator(".download-note")).toContainText("not installable APKs");
 });
 test("mobile navigation opens, closes and restores keyboard focus", async ({
   page,

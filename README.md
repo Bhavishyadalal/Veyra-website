@@ -12,6 +12,19 @@ React · Motion · React Bits · GSAP · Tailwind · Original generated artwork
 
 </div>
 
+## Current Android source links
+
+The website links stable **0.1.5** to the app repository's `main` source ZIP and
+preview **0.1.6-beta1** to its separate preview branch, with SHA-256 checksums,
+preview change notes and the retained-source catalog. These links are Android
+Studio source projects, not APK downloads. GitHub Releases and the owner's
+Google Drive folder remain separate APK options; check the asset's actual version.
+
+Maintain all project/download links in `src/config.js` when the app changes and
+push corresponding website updates. See [the maintenance rules](AGENTS.md).
+The source links were checked against the actual app Git branch trees; APK
+availability and the Google Drive folder's current contents were not verified.
+
 ## New: coordinated artwork and sharing cards
 
 [Browse the media kit](public/media-kit/README.md). Twelve exports cover link previews, app banners, GitHub social preview, square/story posts, a transparent lockup and browser icons. Two newly generated liquid-glass backgrounds have full-resolution originals. The website footer opens `media.html`, an animated gallery with filters and image previews; `public/media-kit/index.html` also works offline by double-clicking it.

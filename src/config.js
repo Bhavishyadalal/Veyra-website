@@ -28,7 +28,7 @@ export const siteConfig = Object.freeze({
   previewPlaytimeThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/playtime-club-v1.zip`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
   previewUiNotes: `${repository}/blob/${previewBranch}/themes/README.md`,
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/MIDNIGHT-EXPRESS-${previewVersion}.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/PERFORMANCE-${previewVersion}.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

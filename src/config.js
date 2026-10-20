@@ -23,6 +23,7 @@ export const siteConfig = Object.freeze({
   previewChecksum: `${previewSourceZip}.sha256`,
   previewThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/halloween-nocturne-v3.zip`,
   previewWebThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/web-slinger-v1.zip`,
+  previewPlaytimeThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/playtime-club-v1.zip`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
   previewUiNotes: `${repository}/blob/${previewBranch}/themes/README.md`,
   previewBuildNotes: `${repository}/blob/${previewBranch}/verification/THEMES-${previewVersion}.md`,

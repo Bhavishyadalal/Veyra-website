@@ -185,3 +185,5 @@ icons are optional bundled app choices, separate from downloaded theme activatio
 The current preview source also includes compact Theme Studio navigation, a grouped
 18-choice icon picker and live theme application with optional interface refresh.
 The preview UI notes link leads to updated native component studies.
+
+Preview 0.1.7-beta1 includes Playtime Club, an unofficial cartoon fan theme with rounded typography, bubble controls and an optional matching Veyra icon. Theme downloads remain separate from APK releases. Character credits and compatibility are included in the app theme documentation.

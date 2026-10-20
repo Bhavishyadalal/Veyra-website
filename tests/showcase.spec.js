@@ -200,6 +200,7 @@ test("FAQ and external download links are honest and actionable", async ({
   await expect(page.locator(".source-track-preview")).toContainText("for testing");
   await expect(page.getByRole("link",{ name:"Halloween theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/halloween-nocturne-v3.zip");
   await expect(page.getByRole("link",{ name:"Web Slinger theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/web-slinger-v1.zip");
+  await expect(page.getByRole("link",{ name:"Playtime Club theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/playtime-club-v1.zip");
   await expect(page.getByRole("link", { name: "Preview verification notes", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.7-beta1/verification/THEMES-0.1.7-beta1.md");
   await expect(page.locator(".download-note")).toContainText("not installable APKs");

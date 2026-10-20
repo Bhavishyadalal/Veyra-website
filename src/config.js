@@ -21,6 +21,7 @@ export const siteConfig = Object.freeze({
   previewSourceZip,
   previewChecksum: `${previewSourceZip}.sha256`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
+  previewUiNotes: `${repository}/blob/${previewBranch}/verification/UI-POLISH-0.1.6-beta1.md`,
   previewBuildNotes: `${repository}/blob/${previewBranch}/verification/BUILD-WARNINGS-${previewVersion}.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,

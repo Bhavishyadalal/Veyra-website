@@ -1264,6 +1264,7 @@ function App() {
                       </a>
                       <a href={siteConfig.previewChecksum} aria-label="Preview source SHA-256 checksum">SHA-256</a>
                       <a href={siteConfig.previewNotes}>Preview change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
+                      <a href={siteConfig.previewUiNotes}>Interface & motion update <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewBuildNotes}>Preview build notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                     </div>
                   </div>

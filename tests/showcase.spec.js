@@ -204,7 +204,16 @@ test("FAQ and external download links are honest and actionable", async ({
   await expect(page.getByRole("link",{ name:"Astral Tide theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/astral-tide-v1.zip");
   await expect(page.getByRole("link",{ name:"Playtime Club theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/playtime-club-v1.zip");
   await expect(page.getByRole("link", { name: "Preview verification notes", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.7-beta1/verification/PERFORMANCE-0.1.7-beta1.md");
+    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.7-beta1/verification/REFERENCE-COLLECTION-0.1.7-beta1.md");
+  const collection = page.locator(".theme-collection-links");
+  await expect(collection).not.toHaveAttribute("open", "");
+  await collection.locator("summary").click();
+  await expect(page.getByRole("link", { name: "Pumpkin Purr theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/pumpkin-purr-v1.zip");
+  await expect(page.getByRole("link", { name: "Sunset Crew theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/sunset-crew-v1.zip");
+  await expect(page.getByRole("link", { name: "Starry Spirits theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/starry-spirits-v1.zip");
+  await expect(page.getByRole("link", { name: "Analog Reverie theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/analog-reverie-v1.zip");
+  await expect(page.getByRole("link", { name: "Petal Promise theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/petal-promise-v1.zip");
+  await expect(page.getByRole("link", { name: "Moonlit Herbarium theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/moonlit-herbarium-v1.zip");
   await expect(page.locator(".download-note")).toContainText("not installable APKs");
 });
 test("mobile navigation opens, closes and restores keyboard focus", async ({

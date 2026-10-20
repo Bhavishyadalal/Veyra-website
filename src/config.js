@@ -28,7 +28,15 @@ export const siteConfig = Object.freeze({
   previewPlaytimeThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/playtime-club-v1.zip`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
   previewUiNotes: `${repository}/blob/${previewBranch}/themes/README.md`,
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/PERFORMANCE-${previewVersion}.md`,
+  previewReferenceThemes: [
+    { name: "Pumpkin Purr", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/pumpkin-purr-v1.zip` },
+    { name: "Sunset Crew", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/sunset-crew-v1.zip` },
+    { name: "Starry Spirits", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/starry-spirits-v1.zip` },
+    { name: "Analog Reverie", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/analog-reverie-v1.zip` },
+    { name: "Petal Promise", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/petal-promise-v1.zip` },
+    { name: "Moonlit Herbarium", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/moonlit-herbarium-v1.zip` },
+  ],
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/REFERENCE-COLLECTION-${previewVersion}.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

@@ -1020,3 +1020,9 @@ html[data-motion="reduced"] .download-drive {
   outline-offset: 7px;
   border-radius: 3px;
 }
+
+/* Keep the new theme downloads grouped on compact screens. */
+.theme-collection-links { width: 100%; }
+.theme-collection-links summary { cursor: pointer; padding: 10px 0; font-weight: 700; }
+.theme-collection-links .source-track-links { padding: 4px 0 8px; }
+.theme-collection-links summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }

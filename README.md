@@ -192,3 +192,5 @@ Preview 0.1.7-beta1 includes Playtime Club, an unofficial cartoon fan theme with
 Preview 0.1.7-beta1 source now includes saved-content freshness, interrupted-download retries, network-switch recovery, queue undo and optional matching theme icons. [Verification and device-check limits](https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.7-beta1/verification/RELIABILITY-0.1.7-beta1.md). No new APK is implied.
 
 Preview 0.1.7-beta1 now includes Astral Tide: an original bioluminescent ocean theme with bold Space Grotesk headings and an optional manta-waveform launcher. Theme/source ZIPs remain separate from APK releases.
+
+Preview 0.1.7-beta1 includes Midnight Express: original rainy night-train artwork, Rajdhani headings and an optional ticket-waveform launcher. Stable 0.1.6 source remains unchanged; source/theme ZIPs are not APKs.

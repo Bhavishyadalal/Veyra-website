@@ -1271,6 +1271,7 @@ function App() {
                 <p className="download-note">
                   Source ZIPs open in Android Studio; they are not installable APKs.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
+                  {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>
                 <div className="share-frequency">
                   <button

@@ -1274,7 +1274,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs.
+                  Source ZIPs open in Android Studio; they are not installable APKs. Preview includes queue undo, interrupted-download retries and optional matching theme icons.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

@@ -187,3 +187,6 @@ The current preview source also includes compact Theme Studio navigation, a grou
 The preview UI notes link leads to updated native component studies.
 
 Preview 0.1.7-beta1 includes Playtime Club, an unofficial cartoon fan theme with rounded typography, bubble controls and an optional matching Veyra icon. Theme downloads remain separate from APK releases. Character credits and compatibility are included in the app theme documentation.
+
+
+Preview 0.1.7-beta1 source now includes saved-content freshness, interrupted-download retries, network-switch recovery, queue undo and optional matching theme icons. [Verification and device-check limits](https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.7-beta1/verification/RELIABILITY-0.1.7-beta1.md). No new APK is implied.

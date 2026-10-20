@@ -173,3 +173,7 @@ Stable 0.1.6 and preview 0.1.7-beta1 source downloads now include the bounded Ho
 Stable 0.1.6 source is promoted from the completed preview. APK publication is pending the owner’s release; preview 0.1.7-beta1 adds Theme Studio and Halloween Nocturne.
 
 Theme Studio: preview-only [theme pack and native component previews](https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.7-beta1/themes/README.md). These are source/theme downloads; an APK is published separately.
+
+Preview 0.1.7-beta1 now links Halloween Nocturne pack v2: expanded moonlit
+atmosphere, theme-aware song menus and refined Home/Settings components. The
+preview notes and native component gallery remain linked separately from stable.

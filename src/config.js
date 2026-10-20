@@ -21,7 +21,7 @@ export const siteConfig = Object.freeze({
   sourceChecksum: `${sourceZip}.sha256`,
   previewSourceZip,
   previewChecksum: `${previewSourceZip}.sha256`,
-  previewThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/halloween-nocturne-v1.zip`,
+  previewThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/halloween-nocturne-v2.zip`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
   previewUiNotes: `${repository}/blob/${previewBranch}/themes/README.md`,
   previewBuildNotes: `${repository}/blob/${previewBranch}/verification/THEMES-${previewVersion}.md`,

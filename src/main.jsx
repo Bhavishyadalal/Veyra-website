@@ -1254,10 +1254,11 @@ function App() {
                         <Download size={17} aria-hidden="true" /> Android Studio source ZIP
                       </a>
                       <a href={siteConfig.sourceChecksum} aria-label="Stable source SHA-256 checksum">SHA-256</a>
+                      <a href={siteConfig.stableNotes}>Stable change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                     </div>
                   </div>
                   <div className="source-track source-track-preview">
-                    <span className="source-track-label">Preview · for testing</span>
+                    <span className="source-track-label">Completed preview · archived</span>
                     <div className="source-track-links">
                       <a className="source-link" href={siteConfig.previewSourceZip}>
                         <Download size={17} aria-hidden="true" /> Preview {siteConfig.previewVersion} source ZIP

@@ -6,7 +6,7 @@
 - The public website is `https://veyra-website-mauve.vercel.app/`. Keep canonical,
   Open Graph/Twitter images, sharing actions and banner links consistent when it changes.
 - Centralize app/download/creator/repository links in `src/config.js`. Current
-  stable source is 0.1.5 on app `main`; preview source is 0.1.6-beta1 on
+  stable source is 0.1.6 on app `main`; completed preview source is 0.1.6-beta1 on
   `preview/0.1.6-beta1`. Verify the actual remote app branches/files before updating.
 - Stable and preview are distinct tracks. Never silently promote preview as stable.
   Source ZIPs are Android Studio projects, not APKs. Do not claim an APK exists or

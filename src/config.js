@@ -1,6 +1,6 @@
 /** Keep stable and preview source tracks separate; APK publication is independent. */
 const repository = "https://github.com/Bhavishyadalal/Veyra";
-const appVersion = "0.1.5";
+const appVersion = "0.1.6";
 const previewVersion = "0.1.6-beta1";
 const previewBranch = `preview/${previewVersion}`;
 const sourceZip = `${repository}/raw/refs/heads/main/downloads/Veyra_Android_Source_${appVersion}_Stable.zip`;
@@ -16,6 +16,7 @@ export const siteConfig = Object.freeze({
   driveFolder:
     "https://drive.google.com/drive/folders/1KYJ_1LPy3W5Ax5t4R0mw76Mr8xK9SDuS?usp=sharing",
   releases: `${repository}/releases`,
+  stableNotes: `${repository}/blob/main/RELEASE_NOTES_0.1.6.md`,
   sourceZip,
   sourceChecksum: `${sourceZip}.sha256`,
   previewSourceZip,

@@ -184,19 +184,20 @@ test("FAQ and external download links are honest and actionable", async ({
   );
   await expect(
     page.getByRole("link", { name: "Android Studio source ZIP", exact: true }),
-  ).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/downloads/Veyra_Android_Source_0.1.5_Stable.zip");
-  await expect(page.locator(".source-track").first()).toContainText("Stable 0.1.5");
+  ).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/downloads/Veyra_Android_Source_0.1.6_Stable.zip");
+  await expect(page.locator(".source-track").first()).toContainText("Stable 0.1.6");
+  await expect(page.getByRole("link", { name: "Stable change notes", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/main/RELEASE_NOTES_0.1.6.md");
   await expect(page.getByRole("link", { name: "Preview 0.1.6-beta1 source ZIP", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.6-beta1/downloads/Veyra_Android_Source_0.1.6-beta1.zip");
   await expect(page.getByRole("link", { name: "Stable source SHA-256 checksum", exact: true }))
-    .toHaveAttribute("href", /0\.1\.5_Stable\.zip\.sha256$/);
+    .toHaveAttribute("href", /0\.1\.6_Stable\.zip\.sha256$/);
   await expect(page.getByRole("link", { name: "Preview source SHA-256 checksum", exact: true }))
     .toHaveAttribute("href", /0\.1\.6-beta1\.zip\.sha256$/);
   await expect(page.getByRole("link", { name: "Preview change notes", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/RELEASE_NOTES_0.1.6-beta1.md");
   await expect(page.getByRole("link", { name: "Interface & calm motion update", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/verification/SCROLL-MOTION-0.1.6-beta1.md");
-  await expect(page.locator(".source-track-preview")).toContainText("for testing");
+  await expect(page.locator(".source-track-preview")).toContainText("Completed preview · archived");
   await expect(page.getByRole("link", { name: "Preview build notes", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/verification/BUILD-WARNINGS-0.1.6-beta1.md");
   await expect(page.locator(".download-note")).toContainText("not installable APKs");

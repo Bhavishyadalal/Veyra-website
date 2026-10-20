@@ -195,7 +195,7 @@ test("FAQ and external download links are honest and actionable", async ({
   await expect(page.getByRole("link", { name: "Preview change notes", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/RELEASE_NOTES_0.1.6-beta1.md");
   await expect(page.getByRole("link", { name: "Interface & accessibility update", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/verification/ACCESSIBILITY-0.1.6-beta1.md");
+    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/verification/CUSTOMIZATION-0.1.6-beta1.md");
   await expect(page.locator(".source-track-preview")).toContainText("for testing");
   await expect(page.getByRole("link", { name: "Preview build notes", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/verification/BUILD-WARNINGS-0.1.6-beta1.md");

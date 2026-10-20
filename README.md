@@ -15,7 +15,7 @@ React · Motion · React Bits · GSAP · Tailwind · Original generated artwork
 ## Current Android source links
 
 The website links stable **0.1.6** to the app repository's `main` source ZIP and
-completed preview **0.1.6-beta1** to its separate preview branch, with SHA-256 checksums,
+preview **0.1.7-beta1** to its separate preview branch, with SHA-256 checksums,
 preview change notes and the retained-source catalog. These links are Android
 Studio source projects, not APK downloads. GitHub Releases and the owner's
 Google Drive folder remain separate APK options; check the asset's actual version.
@@ -168,6 +168,8 @@ Veyra is a project by **Bhavishya Dalal**. Original website code is supplied und
 
 See [credits](credits.html), [component provenance](docs/COMPONENTS.md), [font provenance](docs/Super-Malibu-Provenance.md), and `docs/licenses/`.
 
-Stable 0.1.5 and preview 0.1.6-beta1 source downloads now include the bounded Home artwork prefetch, larger disk cache and dedicated artwork concurrency update. [Implementation and verification limits](https://github.com/Bhavishyadalal/Veyra/blob/main/docs/ARTWORK_LOADING.md). No APK publication is implied.
+Stable 0.1.6 and preview 0.1.7-beta1 source downloads now include the bounded Home artwork prefetch, larger disk cache and dedicated artwork concurrency update. [Implementation and verification limits](https://github.com/Bhavishyadalal/Veyra/blob/main/docs/ARTWORK_LOADING.md). No APK publication is implied.
 
-Stable 0.1.6 source is promoted from the completed preview. APK publication is pending the owner’s release; next preview 0.1.7-beta1 theme packs are planned, not available.
+Stable 0.1.6 source is promoted from the completed preview. APK publication is pending the owner’s release; preview 0.1.7-beta1 adds Theme Studio and Halloween Nocturne.
+
+Theme Studio: preview-only [theme pack and native component previews](https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.7-beta1/themes/README.md). These are source/theme downloads; an APK is published separately.

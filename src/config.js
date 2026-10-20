@@ -36,8 +36,15 @@ export const siteConfig = Object.freeze({
     { name: "Petal Promise", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/petal-promise-v2.zip` },
     { name: "Moonlit Herbarium", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/moonlit-herbarium-v2.zip` },
   ],
+  previewWayfarerThemes: [
+    { name: "Golden Afterglow", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/golden-afterglow-v1.zip` },
+    { name: "Lilypond Parade", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/lilypond-parade-v1.zip` },
+    { name: "Dustbyte Outpost", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/dustbyte-outpost-v1.zip` },
+    { name: "Alpine Ember", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/alpine-ember-v1.zip` },
+    { name: "Starfall Pals", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/starfall-pals-v1.zip` },
+  ],
   previewAtelierIcons: `${repository}/blob/${previewBranch}/design/launcher/atelier/README.md`,
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/ATELIER-ICONS-${previewVersion}.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/WAYFARER-COLLECTION-${previewVersion}.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

@@ -1272,9 +1272,17 @@ function App() {
                       <a href={siteConfig.previewAstralThemePack}>Astral Tide theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewPlaytimeThemePack}>Playtime Club theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <details className="theme-collection-links">
-                        <summary>Six new reference-inspired themes</summary>
+                        <summary>Six reference-inspired themes</summary>
                         <div className="source-track-links">
                           {siteConfig.previewReferenceThemes.map(theme => (
+                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
+                          ))}
+                        </div>
+                      </details>
+                      <details className="theme-collection-links wayfarer-links">
+                        <summary>Five new Wayfarer themes</summary>
+                        <div className="source-track-links">
+                          {siteConfig.previewWayfarerThemes.map(theme => (
                             <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                           ))}
                         </div>

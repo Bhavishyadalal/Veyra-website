@@ -1265,7 +1265,7 @@ function App() {
                       </a>
                       <a href={siteConfig.previewChecksum} aria-label="Preview source SHA-256 checksum">SHA-256</a>
                       <a href={siteConfig.previewNotes}>Preview change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewUiNotes}>Theme Studio & native previews <ArrowUpRight size={12} aria-hidden="true" /></a>
+                      <a href={siteConfig.previewUiNotes}>Themes, icon picker & previews <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewThemePack}>Halloween theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewWebThemePack}>Web Slinger theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewBuildNotes}>Preview verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>

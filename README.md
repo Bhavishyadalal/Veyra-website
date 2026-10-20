@@ -181,3 +181,7 @@ preview notes and native component gallery remain linked separately from stable.
 Theme Studio preview code 24 links Web Slinger v1 and Halloween Nocturne v3.
 Both packs require the latest preview; stable source links are unchanged. Launcher
 icons are optional bundled app choices, separate from downloaded theme activation.
+
+The current preview source also includes compact Theme Studio navigation, a grouped
+18-choice icon picker and live theme application with optional interface refresh.
+The preview UI notes link leads to updated native component studies.

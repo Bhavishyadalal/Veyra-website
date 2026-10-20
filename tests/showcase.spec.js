@@ -195,7 +195,7 @@ test("FAQ and external download links are honest and actionable", async ({
     .toHaveAttribute("href", /0\.1\.7-beta1\.zip\.sha256$/);
   await expect(page.getByRole("link", { name: "Preview change notes", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.7-beta1/RELEASE_NOTES_0.1.7-beta1.md");
-  await expect(page.getByRole("link", { name: "Theme Studio & native previews", exact: true }))
+  await expect(page.getByRole("link", { name: "Themes, icon picker & previews", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.7-beta1/themes/README.md");
   await expect(page.locator(".source-track-preview")).toContainText("for testing");
   await expect(page.getByRole("link",{ name:"Halloween theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.7-beta1/themes/packs/halloween-nocturne-v3.zip");

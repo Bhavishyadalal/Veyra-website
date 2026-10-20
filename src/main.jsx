@@ -1279,6 +1279,7 @@ function App() {
                           ))}
                         </div>
                       </details>
+                      <a href={siteConfig.previewAtelierIcons}>12 standalone Glass Atelier icons <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewBuildNotes}>Preview verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                     </div>
                   </div>

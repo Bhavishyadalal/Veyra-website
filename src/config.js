@@ -36,7 +36,8 @@ export const siteConfig = Object.freeze({
     { name: "Petal Promise", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/petal-promise-v2.zip` },
     { name: "Moonlit Herbarium", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/moonlit-herbarium-v2.zip` },
   ],
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/GLASS-ICONS-${previewVersion}.md`,
+  previewAtelierIcons: `${repository}/blob/${previewBranch}/design/launcher/atelier/README.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/ATELIER-ICONS-${previewVersion}.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

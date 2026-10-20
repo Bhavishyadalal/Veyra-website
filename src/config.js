@@ -43,8 +43,15 @@ export const siteConfig = Object.freeze({
     { name: "Alpine Ember", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/alpine-ember-v1.zip` },
     { name: "Starfall Pals", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/starfall-pals-v1.zip` },
   ],
+  previewDreamscapeThemes: [
+    { name: "Chrome Vesper", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/chrome-vesper-v1.zip` },
+    { name: "Window Wish", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/window-wish-v1.zip` },
+    { name: "Cassette Corner", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/cassette-corner-v1.zip` },
+    { name: "Azure Bloom", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/azure-bloom-v1.zip` },
+    { name: "Strawberry Daydream", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/strawberry-daydream-v1.zip` },
+  ],
   previewAtelierIcons: `${repository}/blob/${previewBranch}/design/launcher/atelier/README.md`,
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/WAYFARER-COLLECTION-${previewVersion}.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/DREAMSCAPE-COLLECTION-${previewVersion}.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

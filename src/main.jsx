@@ -1280,9 +1280,17 @@ function App() {
                         </div>
                       </details>
                       <details className="theme-collection-links wayfarer-links">
-                        <summary>Five new Wayfarer themes</summary>
+                        <summary>Five Wayfarer themes</summary>
                         <div className="source-track-links">
                           {siteConfig.previewWayfarerThemes.map(theme => (
+                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
+                          ))}
+                        </div>
+                      </details>
+                      <details className="theme-collection-links dreamscape-links">
+                        <summary>Five new Dreamscape themes</summary>
+                        <div className="source-track-links">
+                          {siteConfig.previewDreamscapeThemes.map(theme => (
                             <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                           ))}
                         </div>

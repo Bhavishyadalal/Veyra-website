@@ -177,3 +177,7 @@ Theme Studio: preview-only [theme pack and native component previews](https://gi
 Preview 0.1.7-beta1 now links Halloween Nocturne pack v2: expanded moonlit
 atmosphere, theme-aware song menus and refined Home/Settings components. The
 preview notes and native component gallery remain linked separately from stable.
+
+Theme Studio preview code 24 links Web Slinger v1 and Halloween Nocturne v3.
+Both packs require the latest preview; stable source links are unchanged. Launcher
+icons are optional bundled app choices, separate from downloaded theme activation.

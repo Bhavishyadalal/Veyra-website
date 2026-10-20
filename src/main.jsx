@@ -1268,6 +1268,7 @@ function App() {
                       <a href={siteConfig.previewUiNotes}>Themes, icon picker & previews <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewThemePack}>Halloween theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewWebThemePack}>Web Slinger theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
+                      <a href={siteConfig.previewAstralThemePack}>Astral Tide theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewPlaytimeThemePack}>Playtime Club theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewBuildNotes}>Preview verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                     </div>

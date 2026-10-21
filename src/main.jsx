@@ -1288,13 +1288,23 @@ function App() {
                         </div>
                       </details>
                       <details className="theme-collection-links dreamscape-links">
-                        <summary>Five new Dreamscape themes</summary>
+                        <summary>Five Dreamscape themes</summary>
                         <div className="source-track-links">
                           {siteConfig.previewDreamscapeThemes.map(theme => (
                             <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                           ))}
                         </div>
                       </details>
+                      {siteConfig.previewWorldCollections.map(collection => (
+                        <details key={collection.title} className="theme-collection-links worlds-links">
+                          <summary>{collection.title}</summary>
+                          <div className="source-track-links">
+                            {collection.themes.map(theme => (
+                              <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
+                            ))}
+                          </div>
+                        </details>
+                      ))}
                       <a href={siteConfig.previewAtelierIcons}>12 standalone Glass Atelier icons <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewBuildNotes}>Preview verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                     </div>

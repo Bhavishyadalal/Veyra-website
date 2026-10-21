@@ -1321,7 +1321,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs. The five Keepsake themes work on stable 0.1.7; their new launcher icons and Studio improvements are exclusive to beta 0.1.8.
+                  Source ZIPs open in Android Studio; they are not installable APKs. The five Keepsake themes work on stable 0.1.7. Beta 0.1.8 adds independent font presets, an All icons view, stronger themed backgrounds and cached Studio previews.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

@@ -90,7 +90,7 @@ export const siteConfig = Object.freeze({
     ] },
   ],
   previewAtelierIcons: `${repository}/blob/${previewBranch}/design/launcher/atelier/README.md`,
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/KEEPSAKE-${previewVersion}.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/APPEARANCE-${previewVersion}.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

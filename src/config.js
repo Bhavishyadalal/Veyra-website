@@ -1,7 +1,7 @@
 /** Keep stable and preview source tracks separate; APK publication is independent. */
 const repository = "https://github.com/Bhavishyadalal/Veyra";
 const appVersion = "0.1.7";
-const previewVersion = "0.1.7-beta1";
+const previewVersion = "0.1.8-beta1";
 const previewBranch = `preview/${previewVersion}`;
 const sourceZip = `${repository}/raw/refs/heads/main/downloads/Veyra_Android_Source_${appVersion}_Stable.zip`;
 const previewSourceZip = `${repository}/raw/refs/heads/${previewBranch}/downloads/Veyra_Android_Source_${previewVersion}.zip`;
@@ -18,7 +18,7 @@ export const siteConfig = Object.freeze({
   releases: `${repository}/releases`,
   stableNotes: `${repository}/blob/main/RELEASE_NOTES_${appVersion}.md`,
   stableThemes: `${repository}/blob/main/themes/README.md`,
-  stableBuildNotes: `${repository}/blob/main/verification/THEME-INSTALL-0.1.7.md`,
+  stableBuildNotes: `${repository}/blob/main/verification/KEEPSAKE-STABLE-0.1.7.md`,
   sourceZip,
   sourceChecksum: `${sourceZip}.sha256`,
   previewSourceZip,
@@ -52,6 +52,13 @@ export const siteConfig = Object.freeze({
     { name: "Azure Bloom", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/azure-bloom-v1.zip` },
     { name: "Strawberry Daydream", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/strawberry-daydream-v1.zip` },
   ],
+  keepsakeThemes: [
+    { name: "Patchwork Picnic", url: `${repository}/raw/refs/heads/main/themes/packs/patchwork-picnic-v1.zip` },
+    { name: "Clover Requiem", url: `${repository}/raw/refs/heads/main/themes/packs/clover-requiem-v1.zip` },
+    { name: "Sunroom Mixtape", url: `${repository}/raw/refs/heads/main/themes/packs/sunroom-mixtape-v1.zip` },
+    { name: "Concrete Afterhours", url: `${repository}/raw/refs/heads/main/themes/packs/concrete-afterhours-v1.zip` },
+    { name: "Matcha Mischief", url: `${repository}/raw/refs/heads/main/themes/packs/matcha-mischief-v1.zip` },
+  ],
   previewWorldCollections: [
     { title: "Glass, lanterns & arcades", themes: [
       { name: "Stained Glass Sonata", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/stained-glass-sonata-v1.zip` },
@@ -83,7 +90,7 @@ export const siteConfig = Object.freeze({
     ] },
   ],
   previewAtelierIcons: `${repository}/blob/${previewBranch}/design/launcher/atelier/README.md`,
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/SUBMISSION-REVIEW-${previewVersion}.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/KEEPSAKE-${previewVersion}.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

@@ -1260,7 +1260,7 @@ function App() {
                     </div>
                   </div>
                   <div className="source-track source-track-preview">
-                    <span className="source-track-label">Archived preview · for testing</span>
+                    <span className="source-track-label">Beta preview · for testing</span>
                     <div className="source-track-links">
                       <a className="source-link" href={siteConfig.previewSourceZip}>
                         <Download size={17} aria-hidden="true" /> Preview {siteConfig.previewVersion} source ZIP
@@ -1297,6 +1297,14 @@ function App() {
                           ))}
                         </div>
                       </details>
+                      <details className="theme-collection-links keepsake-links">
+                        <summary>Five Keepsake themes · stable 0.1.7 compatible</summary>
+                        <div className="source-track-links">
+                          {siteConfig.keepsakeThemes.map(theme => (
+                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP <Download size={12} aria-hidden="true" /></a>
+                          ))}
+                        </div>
+                      </details>
                       {siteConfig.previewWorldCollections.map(collection => (
                         <details key={collection.title} className="theme-collection-links worlds-links">
                           <summary>{collection.title}</summary>
@@ -1313,7 +1321,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs. Preview includes queue undo, interrupted-download retries and optional matching theme icons.
+                  Source ZIPs open in Android Studio; they are not installable APKs. The five Keepsake themes work on stable 0.1.7; their new launcher icons and Studio improvements are exclusive to beta 0.1.8.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

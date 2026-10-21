@@ -1321,7 +1321,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs. The five Keepsake themes work on stable 0.1.7. Beta 0.1.8 adds independent font presets, an All icons view, cached Studio previews, theme artwork across pages and sheets, and cleaner connected player controls.
+                  Source ZIPs open in Android Studio; they are not installable APKs. The five Keepsake themes work on stable 0.1.7. Beta 0.1.8 adds three optional app styles — Music Editorial, Listening Room and After Dark — alongside Original and its downloadable themes. After Dark follows the loaded song artwork. App-code changes require rebuilding and installing the preview APK.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

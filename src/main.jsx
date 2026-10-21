@@ -1255,10 +1255,12 @@ function App() {
                       </a>
                       <a href={siteConfig.sourceChecksum} aria-label="Stable source SHA-256 checksum">SHA-256</a>
                       <a href={siteConfig.stableNotes}>Stable change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
+                      <a href={siteConfig.stableThemes}>Stable themes &amp; icons <ArrowUpRight size={12} aria-hidden="true" /></a>
+                      <a href={siteConfig.stableBuildNotes}>Stable verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                     </div>
                   </div>
                   <div className="source-track source-track-preview">
-                    <span className="source-track-label">Preview · for testing</span>
+                    <span className="source-track-label">Archived preview · for testing</span>
                     <div className="source-track-links">
                       <a className="source-link" href={siteConfig.previewSourceZip}>
                         <Download size={17} aria-hidden="true" /> Preview {siteConfig.previewVersion} source ZIP

@@ -81,7 +81,7 @@ export const siteConfig = Object.freeze({
     ] },
   ],
   previewAtelierIcons: `${repository}/blob/${previewBranch}/design/launcher/atelier/README.md`,
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/WORLDS-COLLECTION-${previewVersion}.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/SUBMISSION-REVIEW-${previewVersion}.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

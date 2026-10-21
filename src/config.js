@@ -18,7 +18,7 @@ export const siteConfig = Object.freeze({
   releases: `${repository}/releases`,
   stableNotes: `${repository}/blob/main/RELEASE_NOTES_${appVersion}.md`,
   stableThemes: `${repository}/blob/main/themes/README.md`,
-  stableBuildNotes: `${repository}/blob/main/verification/SCROLL-PLAYER-0.1.8.md`,
+  stableBuildNotes: `${repository}/blob/main/verification/PINNED-HOME-0.1.8.md`,
   sourceZip,
   sourceChecksum: `${sourceZip}.sha256`,
   previewSourceZip,

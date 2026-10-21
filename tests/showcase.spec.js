@@ -190,7 +190,7 @@ test("FAQ and external download links are honest and actionable", async ({
   await expect(page.getByRole("link", { name: "Stable themes & icons", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/main/themes/README.md");
   await expect(page.getByRole("link", { name: "Stable verification notes", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/main/verification/STABLE-0.1.8-PROMOTION.md");
+    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/main/verification/SCROLL-PLAYER-0.1.8.md");
   await expect(page.getByRole("link", { name: "Preview 0.1.8-beta1 source ZIP", exact: true }))
     .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.1.8-beta1/downloads/Veyra_Android_Source_0.1.8-beta1.zip");
   await expect(page.getByRole("link", { name: "Stable source SHA-256 checksum", exact: true }))

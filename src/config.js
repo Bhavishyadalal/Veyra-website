@@ -18,7 +18,7 @@ export const siteConfig = Object.freeze({
   releases: `${repository}/releases`,
   stableNotes: `${repository}/blob/main/RELEASE_NOTES_${appVersion}.md`,
   stableThemes: `${repository}/blob/main/themes/README.md`,
-  stableBuildNotes: `${repository}/blob/main/verification/STABLE-0.1.7-PROMOTION.md`,
+  stableBuildNotes: `${repository}/blob/main/verification/THEME-INSTALL-0.1.7.md`,
   sourceZip,
   sourceChecksum: `${sourceZip}.sha256`,
   previewSourceZip,

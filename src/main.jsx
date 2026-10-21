@@ -1321,7 +1321,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs. The five Keepsake themes work on stable 0.1.7. Beta 0.1.8 includes three optional app styles alongside Original, plus an immersive player with theme artwork, five additional widgets, Home/navigation controls and independent font imports. The preview also adds flowing account-panel opening/closing and coordinated page transitions with reduced-motion support. This remains the first experience-roadmap checkpoint; verification notes identify remaining work and device-testing limits. App-code changes require rebuilding and installing the preview APK.
+                  Source ZIPs open in Android Studio; they are not installable APKs. The five Keepsake themes work on stable 0.1.7. Beta 0.1.8 includes three optional app styles alongside Original, plus an immersive player with theme artwork, five additional widgets, Home/navigation controls and independent font imports. The preview also refines transitions with less simultaneous page motion, lazy choice lists and simpler grouped Settings controls, while preserving reduced-motion support. This remains the first experience-roadmap checkpoint; verification notes identify remaining work and device-testing limits. App-code changes require rebuilding and installing the preview APK.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

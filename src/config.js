@@ -29,6 +29,15 @@ export const siteConfig = Object.freeze({
   previewAstralThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/astral-tide-v1.zip`,
   previewPlaytimeThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/playtime-club-v1.zip`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
+  previewAdvancedNotes: `${repository}/blob/${previewBranch}/themes/ADVANCED_WORLDS.md`,
+  previewAdvancedAssets: `${repository}/raw/refs/heads/${previewBranch}/themes/previews/advanced-worlds/collection.png`,
+  previewAdvancedThemes: [
+    { name: "Switchback Radio", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/switchback-radio-v1.zip` },
+    { name: "Komorebi Hour", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/komorebi-hour-v1.zip` },
+    { name: "Rooftop Reverie", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/rooftop-reverie-v1.zip` },
+    { name: "Apex Telemetry", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/apex-telemetry-v1.zip` },
+    { name: "Cinder Kata", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/cinder-kata-v1.zip` },
+  ],
   previewIllustratedNotes: `${repository}/blob/${previewBranch}/themes/ILLUSTRATED_WORLDS.md`,
   previewIllustratedAssets: `${repository}/raw/refs/heads/${previewBranch}/themes/previews/illustrated-worlds/collection.png`,
   previewIllustratedThemes: [

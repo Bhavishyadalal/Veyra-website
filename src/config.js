@@ -29,6 +29,9 @@ export const siteConfig = Object.freeze({
   previewAstralThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/astral-tide-v1.zip`,
   previewPlaytimeThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/playtime-club-v1.zip`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
+  previewSketchTheme: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/margin-notes-v1.zip`,
+  previewSketchAssets: `${repository}/raw/refs/heads/${previewBranch}/themes/previews/margin-notes/all-assets.png`,
+  previewSketchNotes: `${repository}/blob/${previewBranch}/themes/MARGIN_NOTES.md`,
   previewUiNotes: `${repository}/blob/${previewBranch}/themes/README.md`,
   previewReferenceThemes: [
     { name: "Pumpkin Purr", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/pumpkin-purr-v2.zip` },

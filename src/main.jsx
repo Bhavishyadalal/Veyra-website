@@ -1266,6 +1266,9 @@ function App() {
                         <Download size={17} aria-hidden="true" /> Preview {siteConfig.previewVersion} source ZIP
                       </a>
                       <a href={siteConfig.previewChecksum} aria-label="Preview source SHA-256 checksum">SHA-256</a>
+                      <a href={siteConfig.previewSketchTheme}>Margin Notes sketch theme · beta build 30 <ArrowUpRight size={12} aria-hidden="true" /></a>
+                      <a href={siteConfig.previewSketchAssets}>Preview every sketch asset <ArrowUpRight size={12} aria-hidden="true" /></a>
+                      <a href={siteConfig.previewSketchNotes}>Sketch motion & compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewNotes}>Preview change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewUiNotes}>Themes, icon picker & previews <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewThemePack}>Halloween theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
@@ -1321,7 +1324,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs. Stable 0.1.8 includes the completed beta: three optional app styles alongside Original, immersive playback with theme artwork, five additional widgets, Home/navigation customization, independent fonts, simpler Settings sections and lighter transitions. Original Home now has an optional pinned header, a separate Pin Home header setting and continuous artwork, with theme-matched listening cards and fewer showcase banners. Scroll-player folding animations have their own switch and work with Liquid Glass off. Beta 0.1.9 adds safer playback recovery, adjustable theme artwork, clearer queue actions, compact Home choices and search retry handling. Theme packs also work on stable 0.1.7. Verification notes describe device-testing limits. Rebuild and install the stable APK to receive app-code changes.
+                  Source ZIPs open in Android Studio; they are not installable APKs. Stable 0.1.8 includes the completed beta: three optional app styles alongside Original, immersive playback with theme artwork, five additional widgets, Home/navigation customization, independent fonts, simpler Settings sections and lighter transitions. Original Home now has an optional pinned header, a separate Pin Home header setting and continuous artwork, with theme-matched listening cards and fewer showcase banners. Scroll-player folding animations have their own switch and work with Liquid Glass off. Beta 0.1.9 build 30 adds the Margin Notes sketch theme with hand-drawn assets and native sketch motion, plus safer playback recovery, adjustable theme artwork, clearer queue actions, compact Home choices and search retry handling. Theme packs also work on stable 0.1.7. Verification notes describe device-testing limits. Rebuild and install the stable APK to receive app-code changes.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

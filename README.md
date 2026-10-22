@@ -15,7 +15,7 @@ React · Motion · React Bits · GSAP · Tailwind · Original generated artwork
 ## Current Android source links
 
 The website links stable **0.1.8** to the app repository's `main` source ZIP and
-completed preview **0.1.8-beta1** to its separate preview branch, with SHA-256 checksums,
+development preview **0.1.9-beta1** to its separate preview branch, with SHA-256 checksums,
 preview change notes and the retained-source catalog. These links are Android
 Studio source projects, not APK downloads. GitHub Releases and the owner's
 Google Drive folder remain separate APK options; check the asset's actual version.

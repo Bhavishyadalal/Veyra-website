@@ -198,3 +198,5 @@ Preview 0.1.7-beta1 includes Midnight Express: original rainy night-train artwor
 Preview 0.1.9-beta1 now includes the listening and personalization update: safer playback recovery, theme artwork controls, queue browsing/actions, Home layout choices and search paging recovery. Stable links remain on 0.1.8.
 
 Beta build 30 includes Margin Notes, the first native sketch preset. Its theme ZIP, complete asset-sheet and compatibility notes are linked separately from stable downloads.
+
+Five Illustrated Worlds packs reuse supported build-30 presets: Lantern Letters, Velvet Orbit, Moss & Mechanism, Sugar Static and Tidal Origami. Download, overview and compatibility links are centralized in config.js.

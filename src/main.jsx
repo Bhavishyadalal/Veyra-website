@@ -1277,6 +1277,16 @@ function App() {
                       <a href={siteConfig.previewAstralThemePack}>Astral Tide theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewPlaytimeThemePack}>Playtime Club theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <details className="theme-collection-links">
+                        <summary>Illustrated Worlds · five special beta themes</summary>
+                        <div className="source-track-links">
+                          <a href={siteConfig.previewIllustratedAssets}>Compare all five illustrated worlds <ArrowUpRight size={12} aria-hidden="true" /></a>
+                          <a href={siteConfig.previewIllustratedNotes}>Assets, native presets & build-30 compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
+                          {siteConfig.previewIllustratedThemes.map(theme => (
+                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP · build 30 <Download size={12} aria-hidden="true" /></a>
+                          ))}
+                        </div>
+                      </details>
+                      <details className="theme-collection-links">
                         <summary>Six reference-inspired themes</summary>
                         <div className="source-track-links">
                           {siteConfig.previewReferenceThemes.map(theme => (
@@ -1324,7 +1334,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs. Stable 0.1.8 includes the completed beta: three optional app styles alongside Original, immersive playback with theme artwork, five additional widgets, Home/navigation customization, independent fonts, simpler Settings sections and lighter transitions. Original Home now has an optional pinned header, a separate Pin Home header setting and continuous artwork, with theme-matched listening cards and fewer showcase banners. Scroll-player folding animations have their own switch and work with Liquid Glass off. Beta 0.1.9 build 30 adds the Margin Notes sketch theme with hand-drawn assets and native sketch motion, plus safer playback recovery, adjustable theme artwork, clearer queue actions, compact Home choices and search retry handling. Earlier theme packs also work on stable 0.1.7; Margin Notes requires beta build 30. Verification notes describe device-testing limits. Rebuild and install the stable APK to receive app-code changes.
+                  Source ZIPs open in Android Studio; they are not installable APKs. Stable 0.1.8 includes the completed beta: three optional app styles alongside Original, immersive playback with theme artwork, five additional widgets, Home/navigation customization, independent fonts, simpler Settings sections and lighter transitions. Original Home now has an optional pinned header, a separate Pin Home header setting and continuous artwork, with theme-matched listening cards and fewer showcase banners. Scroll-player folding animations have their own switch and work with Liquid Glass off. Beta 0.1.9 build 30 supports five new Illustrated Worlds packs alongside the Margin Notes sketch theme with hand-drawn assets and native sketch motion, plus safer playback recovery, adjustable theme artwork, clearer queue actions, compact Home choices and search retry handling. Earlier theme packs also work on stable 0.1.7; the special illustration collection and Margin Notes require beta build 30. Verification notes describe device-testing limits. Rebuild and install the stable APK to receive app-code changes.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

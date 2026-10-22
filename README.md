@@ -194,3 +194,5 @@ Preview 0.1.7-beta1 source now includes saved-content freshness, interrupted-dow
 Preview 0.1.7-beta1 now includes Astral Tide: an original bioluminescent ocean theme with bold Space Grotesk headings and an optional manta-waveform launcher. Theme/source ZIPs remain separate from APK releases.
 
 Preview 0.1.7-beta1 includes Midnight Express: original rainy night-train artwork, Rajdhani headings and an optional ticket-waveform launcher. Stable 0.1.6 source remains unchanged; source/theme ZIPs are not APKs.
+
+Preview 0.1.9-beta1 now includes the listening and personalization update: safer playback recovery, theme artwork controls, queue browsing/actions, Home layout choices and search paging recovery. Stable links remain on 0.1.8.

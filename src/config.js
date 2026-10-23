@@ -29,6 +29,15 @@ export const siteConfig = Object.freeze({
   previewAstralThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/astral-tide-v1.zip`,
   previewPlaytimeThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/playtime-club-v1.zip`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
+  previewPunkNotes: `${repository}/blob/${previewBranch}/themes/PUNK_WORLDS.md`,
+  previewPunkAssets: `${repository}/raw/refs/heads/${previewBranch}/themes/previews/punk-worlds/collection.png`,
+  previewPunkThemes: [
+    { name: "Riot Candy", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/riot-candy-v1.zip` },
+    { name: "Chrome Venom", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/chrome-venom-v1.zip` },
+    { name: "Bubble Riot", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/bubble-riot-v1.zip` },
+    { name: "Xerox Afterparty", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/xerox-afterparty-v1.zip` },
+    { name: "Cosmic Vandal", url: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/cosmic-vandal-v1.zip` },
+  ],
   previewAdvancedNotes: `${repository}/blob/${previewBranch}/themes/ADVANCED_WORLDS.md`,
   previewAdvancedAssets: `${repository}/raw/refs/heads/${previewBranch}/themes/previews/advanced-worlds/collection.png`,
   previewAdvancedThemes: [

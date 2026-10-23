@@ -1277,6 +1277,16 @@ function App() {
                       <a href={siteConfig.previewAstralThemePack}>Astral Tide theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewPlaytimeThemePack}>Playtime Club theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
                       <details className="theme-collection-links">
+                        <summary>Punk Worlds · five full-color themes · build 32</summary>
+                        <div className="source-track-links">
+                          <a href={siteConfig.previewPunkAssets}>Compare the five punk themes <ArrowUpRight size={12} aria-hidden="true" /></a>
+                          <a href={siteConfig.previewPunkNotes}>Real fonts, 123 asset roles & build-32 compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
+                          {siteConfig.previewPunkThemes.map(theme => (
+                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP · build 32 <Download size={12} aria-hidden="true" /></a>
+                          ))}
+                        </div>
+                      </details>
+                      <details className="theme-collection-links">
                         <summary>Advanced Worlds · five complete control themes · build 31</summary>
                         <div className="source-track-links">
                           <a href={siteConfig.previewAdvancedAssets}>Compare the five new worlds <ArrowUpRight size={12} aria-hidden="true" /></a>
@@ -1344,7 +1354,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs. Stable 0.1.8 includes the completed beta: three optional app styles alongside Original, immersive playback with theme artwork, five additional widgets, Home/navigation customization, independent fonts, simpler Settings sections and lighter transitions. Original Home now has an optional pinned header, a separate Pin Home header setting and continuous artwork, with theme-matched listening cards and fewer showcase banners. Scroll-player folding animations have their own switch and work with Liquid Glass off. Beta 0.1.9 build 31 adds five Advanced Worlds packs with expanded Home, player and Settings glyphs, custom control geometry, progress tracks and native page motion. Each has 119 asset roles and requires the rebuilt build-31 beta APK. It also supports the five Illustrated Worlds packs alongside the Margin Notes sketch theme with hand-drawn assets and native sketch motion, plus safer playback recovery, adjustable theme artwork, clearer queue actions, compact Home choices and search retry handling. Earlier theme packs also work on stable 0.1.7; Illustrated Worlds and Margin Notes require beta build 30 or newer; Advanced Worlds requires build 31. Verification notes describe device-testing limits. Rebuild and install the stable APK to receive app-code changes.
+                  Source ZIPs open in Android Studio; they are not installable APKs. Stable 0.1.8 includes the completed beta: three optional app styles alongside Original, immersive playback with theme artwork, five additional widgets, Home/navigation customization, independent fonts, simpler Settings sections and lighter transitions. Original Home now has an optional pinned header, a separate Pin Home header setting and continuous artwork, with theme-matched listening cards and fewer showcase banners. Scroll-player folding animations have their own switch and work with Liquid Glass off. Beta 0.1.9 build 32 adds five Punk Worlds themes with original-color icons, pressed player-button skins, licensed display fonts, colored headings and matching native controls/motion. Each has 123 asset roles; its AI concept board is separate from the actual runtime asset sheets. The updated beta APK is required. It also supports the five Advanced Worlds packs with expanded Home, player and Settings glyphs, custom control geometry, progress tracks and native page motion. Each has 119 asset roles and requires the rebuilt build-31 beta APK. It also supports the five Illustrated Worlds packs alongside the Margin Notes sketch theme with hand-drawn assets and native sketch motion, plus safer playback recovery, adjustable theme artwork, clearer queue actions, compact Home choices and search retry handling. Earlier theme packs also work on stable 0.1.7; Illustrated Worlds and Margin Notes require beta build 30 or newer; Advanced Worlds requires build 31; Punk Worlds requires build 32. These are full themes; independent asset-pack layering remains planned. Verification notes describe device-testing limits. Rebuild and install the stable APK to receive app-code changes.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

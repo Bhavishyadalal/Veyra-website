@@ -14,7 +14,7 @@ React · Motion · React Bits · GSAP · Tailwind · Original generated artwork
 
 ## Current Android source links
 
-The website links stable **0.1.8** to the app repository's `main` source ZIP and
+The website links stable **0.1.9** to the app repository's `main` source ZIP and
 development preview **0.1.9-beta1** to its separate preview branch, with SHA-256 checksums,
 preview change notes and the retained-source catalog. These links are Android
 Studio source projects, not APK downloads. GitHub Releases and the owner's
@@ -195,7 +195,7 @@ Preview 0.1.7-beta1 now includes Astral Tide: an original bioluminescent ocean t
 
 Preview 0.1.7-beta1 includes Midnight Express: original rainy night-train artwork, Rajdhani headings and an optional ticket-waveform launcher. Stable 0.1.6 source remains unchanged; source/theme ZIPs are not APKs.
 
-Preview 0.1.9-beta1 now includes the listening and personalization update: safer playback recovery, theme artwork controls, queue browsing/actions, Home layout choices and search paging recovery. Stable links remain on 0.1.8.
+Preview 0.1.9-beta1 now includes the listening and personalization update: safer playback recovery, theme artwork controls, queue browsing/actions, Home layout choices and search paging recovery. Stable 0.1.9 now includes this completed preview; the preview branch remains preserved.
 
 Beta build 30 includes Margin Notes, the first native sketch preset. Its theme ZIP, complete asset-sheet and compatibility notes are linked separately from stable downloads.
 

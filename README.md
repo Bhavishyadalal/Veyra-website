@@ -202,3 +202,5 @@ Beta build 30 includes Margin Notes, the first native sketch preset. Its theme Z
 Five Illustrated Worlds packs reuse supported build-30 presets: Lantern Letters, Velvet Orbit, Moss & Mechanism, Sugar Static and Tidal Origami. Download, overview and compatibility links are centralized in config.js.
 
 Stable build 39 replaces the ten flat Night Vault launcher icons with sculpted AI glass editions. It retains the build 38 Night Vault collection, playback/Home fixes and adaptive immersive picker. Current source/checksum and verification links point to app main; beta links remain preserved.
+
+Stable build 40 redesigns the immersive picker as a responsive poster gallery with pinned heading/close and grouped controls. Current verification notes and source links target build 40; Night Vault glass previews and beta links remain intact.

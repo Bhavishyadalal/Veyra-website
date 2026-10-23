@@ -200,3 +200,5 @@ Preview 0.1.9-beta1 now includes the listening and personalization update: safer
 Beta build 30 includes Margin Notes, the first native sketch preset. Its theme ZIP, complete asset-sheet and compatibility notes are linked separately from stable downloads.
 
 Five Illustrated Worlds packs reuse supported build-30 presets: Lantern Letters, Velvet Orbit, Moss & Mechanism, Sugar Static and Tidal Origami. Download, overview and compatibility links are centralized in config.js.
+
+Stable build 38 adds the Night Vault collection and matching icons, playback/Home fixes and an adaptive immersive picker. Current source/checksum and verification links point to app main; beta links remain preserved.

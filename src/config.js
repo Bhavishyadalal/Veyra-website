@@ -29,6 +29,15 @@ export const siteConfig = Object.freeze({
   previewAstralThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/astral-tide-v1.zip`,
   previewPlaytimeThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/playtime-club-v1.zip`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
+  previewAssetNotes: `${repository}/blob/${previewBranch}/asset-packs/README.md`,
+  previewAssetBoard: `${repository}/raw/refs/heads/${previewBranch}/asset-packs/previews/art-direction.png`,
+  previewAssetPacks: [
+    { name: "Spray Parade", url: `${repository}/raw/refs/heads/${previewBranch}/asset-packs/packs/spray-parade-v1.zip` },
+    { name: "Paper Pop", url: `${repository}/raw/refs/heads/${previewBranch}/asset-packs/packs/paper-pop-v1.zip` },
+    { name: "Ink Rebel", url: `${repository}/raw/refs/heads/${previewBranch}/asset-packs/packs/ink-rebel-v1.zip` },
+    { name: "Laser Club", url: `${repository}/raw/refs/heads/${previewBranch}/asset-packs/packs/laser-club-v1.zip` },
+    { name: "Thread Riot", url: `${repository}/raw/refs/heads/${previewBranch}/asset-packs/packs/thread-riot-v1.zip` },
+  ],
   previewPunkNotes: `${repository}/blob/${previewBranch}/themes/PUNK_WORLDS.md`,
   previewPunkAssets: `${repository}/raw/refs/heads/${previewBranch}/themes/previews/punk-worlds/collection.png`,
   previewPunkThemes: [

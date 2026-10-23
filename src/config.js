@@ -29,6 +29,8 @@ export const siteConfig = Object.freeze({
   previewAstralThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/astral-tide-v1.zip`,
   previewPlaytimeThemePack: `${repository}/raw/refs/heads/${previewBranch}/themes/packs/playtime-club-v1.zip`,
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
+  previewIconNotes: `${repository}/blob/${previewBranch}/design/launcher/collections/README.md`,
+  previewIconGallery: `${repository}/raw/refs/heads/${previewBranch}/design/launcher/collections/previews/collection.png`,
   previewPerformanceNotes: `${repository}/blob/${previewBranch}/verification/ASSET-PERFORMANCE-${previewVersion}.md`,
   previewAssetNotes: `${repository}/blob/${previewBranch}/asset-packs/README.md`,
   previewAssetBoard: `${repository}/raw/refs/heads/${previewBranch}/asset-packs/previews/art-direction.png`,

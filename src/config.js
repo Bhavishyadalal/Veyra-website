@@ -18,7 +18,7 @@ export const siteConfig = Object.freeze({
   releases: `${repository}/releases`,
   stableNotes: `${repository}/blob/main/RELEASE_NOTES_${appVersion}.md`,
   stableThemes: `${repository}/blob/main/themes/README.md`,
-  stableBuildNotes: `${repository}/blob/main/verification/STABLE-0.1.9-PROMOTION.md`,
+  stableBuildNotes: `${repository}/blob/main/verification/IMMERSIVE-WORLDS-0.1.9.md`,
   sourceZip,
   sourceChecksum: `${sourceZip}.sha256`,
   previewSourceZip,

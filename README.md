@@ -204,3 +204,5 @@ Five Illustrated Worlds packs reuse supported build-30 presets: Lantern Letters,
 Stable build 39 replaces the ten flat Night Vault launcher icons with sculpted AI glass editions. It retains the build 38 Night Vault collection, playback/Home fixes and adaptive immersive picker. Current source/checksum and verification links point to app main; beta links remain preserved.
 
 Stable build 40 redesigns the immersive picker as a responsive poster gallery with pinned heading/close and grouped controls. Current verification notes and source links target build 40; Night Vault glass previews and beta links remain intact.
+
+Current active preview is 0.2.0-beta1 / code 41, based on tested stable 0.1.9 build 40. Preview source/checksum/catalog links use preview/0.2.0-beta1. Stable app/version/source links remain unchanged; the previous beta is historical.

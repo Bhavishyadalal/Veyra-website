@@ -18,8 +18,9 @@ export const siteConfig = Object.freeze({
   releases: `${repository}/releases`,
   stableNotes: `${repository}/blob/main/RELEASE_NOTES_${appVersion}.md`,
   stableThemes: `${repository}/blob/main/themes/README.md`,
-  stableBuildNotes: `${repository}/blob/main/verification/PATCH-0.1.9-BUILD-38.md`,
+  stableBuildNotes: `${repository}/blob/main/verification/GLASS-ICONS-0.1.9-BUILD-39.md`,
   stableNightVaultNotes: `${repository}/blob/main/asset-packs/NIGHT_VAULT.md`,
+  stableNightVaultIcons: `${repository}/raw/refs/heads/main/design/launcher/night-vault/previews/glass-editions.webp`,
   stableNightVaultBoard: `${repository}/raw/refs/heads/main/asset-packs/previews/night-vault/art-direction.png`,
   stableNightVaultPacks: [
     { name: "Cathedral Static", url: `${repository}/raw/refs/heads/main/asset-packs/packs/cathedral-static-v1.zip` },

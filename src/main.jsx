@@ -1258,9 +1258,10 @@ function App() {
                       <a href={siteConfig.stableThemes}>Stable themes &amp; icons <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.stableBuildNotes}>Stable verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <details className="theme-collection-links">
-                        <summary>Night Vault · ten gothic and punk asset packs · stable build 38</summary>
+                        <summary>Night Vault · ten gothic and punk packs · glass icons in build 39</summary>
                         <div className="source-track-links">
-                          <a href={siteConfig.stableNightVaultNotes}>Actual assets, ten waveform icons, fonts and compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
+                          <a href={siteConfig.stableNightVaultNotes}>Actual assets, ten glass waveform icons, fonts and compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
+                          <a href={siteConfig.stableNightVaultIcons}>Ten glass launcher icons · actual bundled artwork <ArrowUpRight size={12} aria-hidden="true" /></a>
                           <a href={siteConfig.stableNightVaultBoard}>AI concept direction · shipped specimens in pack notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                           {siteConfig.stableNightVaultPacks.map(pack => (
                             <a key={pack.name} href={pack.url}>{pack.name} asset ZIP <Download size={12} aria-hidden="true" /></a>
@@ -1377,7 +1378,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs. Stable 0.1.9 build 38 includes buffering Play/Pause fixes, Home refresh and artwork recovery, an adaptive immersive picker and covered-page suspension. Ten Night Vault gothic/punk overlays and matching waveform icons bring the collection to 62 themes, 15 asset packs and 105 launcher choices. The six immersive presentations, optional app styles, independent fonts, widgets, queue improvements and Home/search controls remain available. Rebuild and install build 38 for the app fixes and new launcher choices. Additional data packs using an installed engine's supported presets can be downloaded without another rebuild. The completed beta remains on its separate branch. Verification notes describe the remaining device-testing limits.
+                  Source ZIPs open in Android Studio; they are not installable APKs. Stable 0.1.9 build 39 replaces the ten flat Night Vault launcher icons with sculpted glass editions while preserving buffering Play/Pause fixes, Home refresh and artwork recovery, an adaptive immersive picker and covered-page suspension. Ten Night Vault gothic/punk overlays and matching waveform icons bring the collection to 62 themes, 15 asset packs and 105 launcher choices. The six immersive presentations, optional app styles, independent fonts, widgets, queue improvements and Home/search controls remain available. Rebuild and install build 39 for the glass launcher artwork and earlier app fixes. Additional data packs using an installed engine's supported presets can be downloaded without another rebuild. The completed beta remains on its separate branch. Verification notes describe the remaining device-testing limits.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

@@ -14,8 +14,8 @@ React · Motion · React Bits · GSAP · Tailwind · Original generated artwork
 
 ## Current Android source links
 
-The website links stable **0.1.9** to the app repository's `main` source ZIP and
-development preview **0.1.9-beta1** to its separate preview branch, with SHA-256 checksums,
+The website links stable **0.2.0** to the app repository's `main` source ZIP and
+completed preview **0.2.0-beta1** to its separate preview branch, with SHA-256 checksums,
 preview change notes and the retained-source catalog. These links are Android
 Studio source projects, not APK downloads. GitHub Releases and the owner's
 Google Drive folder remain separate APK options; check the asset's actual version.
@@ -214,3 +214,5 @@ Preview build 43 adds Navigation studio: six bottom-bar designs, five finite scr
 Preview build 44 fixes stale Library/account responses, concurrent ratings and theme/navigation rendering. Stable source links remain unchanged; focused review notes are linked from the preview release notes.
 
 Preview build 45 adds Chaos Studio: ten full themes, seven overlays (72/22 total), ten app motion profiles, ten additional scroll-player transitions, ten additional navigation designs and independent pace controls. Source downloads include all immutable runtime packs in a lossless offline library; stable source and catalog links remain unchanged.
+
+Current stable source: **0.2.0 / code 47**, promoted from completed beta **0.2.0-beta1 / code 46**. Includes 72 themes, 32 overlays, 132 launcher choices, Pocket Riot and completed icon/button mapping. Website source/checksum/verification links target the promoted app branch; APK publication and Vercel deployment are verified separately.

@@ -1,6 +1,6 @@
 /** Keep stable and preview source tracks separate; APK publication is independent. */
 const repository = "https://github.com/Bhavishyadalal/Veyra";
-const appVersion = "0.1.9";
+const appVersion = "0.2.0";
 const previewVersion = "0.2.0-beta1";
 const previewBranch = `preview/${previewVersion}`;
 const sourceZip = `${repository}/raw/refs/heads/main/downloads/Veyra_Android_Source_${appVersion}_Stable.zip`;
@@ -10,7 +10,7 @@ export const siteConfig = Object.freeze({
   website: "https://veyra-website-mauve.vercel.app/",
   appVersion,
   previewVersion,
-  previewCollection: `${repository}/blob/${previewBranch}/themes/previews/chaos-studio/collection.png`,
+  previewCollection: `${repository}/blob/${previewBranch}/asset-packs/previews/pocket-riot/collection.webp`,
   repository,
   creator: "https://github.com/Bhavishyadalal",
   websiteRepository: "https://github.com/Bhavishyadalal/Veyra-website",
@@ -18,8 +18,9 @@ export const siteConfig = Object.freeze({
     "https://drive.google.com/drive/folders/1KYJ_1LPy3W5Ax5t4R0mw76Mr8xK9SDuS?usp=sharing",
   releases: `${repository}/releases`,
   stableNotes: `${repository}/blob/main/RELEASE_NOTES_${appVersion}.md`,
+  stablePocketIcons: `${repository}/blob/main/design/launcher/pocket-riot/previews/glass-editions.webp`,
   stableThemes: `${repository}/blob/main/themes/README.md`,
-  stableBuildNotes: `${repository}/blob/main/verification/IMMERSIVE-GALLERY-0.1.9-BUILD-40.md`,
+  stableBuildNotes: `${repository}/blob/main/verification/STABLE-0.2.0-PROMOTION.md`,
   stableNightVaultNotes: `${repository}/blob/main/asset-packs/NIGHT_VAULT.md`,
   stableNightVaultIcons: `${repository}/raw/refs/heads/main/design/launcher/night-vault/previews/glass-editions.webp`,
   stableNightVaultBoard: `${repository}/raw/refs/heads/main/asset-packs/previews/night-vault/art-direction.png`,

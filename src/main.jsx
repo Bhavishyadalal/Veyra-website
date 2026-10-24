@@ -1256,6 +1256,7 @@ function App() {
                       <a href={siteConfig.sourceChecksum} aria-label="Stable source SHA-256 checksum">SHA-256</a>
                       <a href={siteConfig.stableNotes}>Stable change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.stableThemes}>Stable themes &amp; icons <ArrowUpRight size={12} aria-hidden="true" /></a>
+                      <a href={siteConfig.stablePocketIcons}>27 new glass icons <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.stableBuildNotes}>Stable verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <details className="theme-collection-links">
                         <summary>Night Vault · ten gothic and punk packs · glass icons in build 39</summary>
@@ -1280,7 +1281,7 @@ function App() {
                       <a href={siteConfig.previewSketchTheme}>Margin Notes sketch theme · beta build 30 <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewSketchAssets}>Preview every sketch asset <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewSketchNotes}>Sketch motion & compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewCollection}>Chaos Studio assets <ArrowUpRight size={12} aria-hidden="true" /></a>
+                      <a href={siteConfig.previewCollection}>Pocket Riot assets <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewNotes}>Preview change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewUiNotes}>Themes, icon picker & previews <ArrowUpRight size={12} aria-hidden="true" /></a>
                       <a href={siteConfig.previewThemePack}>Halloween theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
@@ -1379,7 +1380,7 @@ function App() {
                   </div>
                 </div>
                 <p className="download-note">
-                  Source ZIPs open in Android Studio; they are not installable APKs. Stable 0.1.9 build 40 introduces an immersive-mode poster gallery with a pinned header, clear selection badges, responsive layouts and grouped controls. It retains the Night Vault glass icons, buffering Play/Pause fixes, Home artwork recovery and covered-page suspension. Ten Night Vault gothic/punk overlays and matching waveform icons bring the collection to 62 themes, 15 asset packs and 105 launcher choices. The six immersive presentations, optional app styles, independent fonts, widgets, queue improvements and Home/search controls remain available. Rebuild and install build 40 for the redesigned immersive picker, glass icons and earlier app fixes. Additional data packs using an installed engine's supported presets can be downloaded without another rebuild. Preview 0.2.0-beta1 build 45 introduces Chaos Studio: ten original AI wallpaper themes and seven independent overlays, for 72 themes and 22 asset packs on the beta track. Choose ten new page-transition styles, three motion paces, ten additional scroll-player transitions and ten new navigation designs. The beta retains account-safe refreshes and theme-aware Liquid Glass. Existing stable collections and downloads remain unchanged. It starts from completed stable build 40 on its own branch; stable downloads remain separate. Verification notes describe the remaining device-testing limits. Runtime pack ZIPs are included losslessly in the source download’s offline data library; the included restore script recovers their original bytes.
+                  Stable 0.2.0 build 47 brings theme-aware Liquid Glass, 16 navigation designs, 15 scroll-player transitions, ten optional page-motion styles and three paces. Pocket Riot completes the collection with 72 themes, 32 independent asset packs and 132 launcher choices, including 27 new AI glass waveform editions. Every theme and overlay now has a matching bundled icon. Asset Studio includes search and Downloaded filtering; control, account-refresh and sheet-apply fixes are retained. The completed 0.2.0-beta1 build 46 remains available on its preview branch. Rebuild/install code 47 for the new native icons and controls. Source ZIPs are Android Studio projects, not APKs; runtime packs are included losslessly in an offline library with a checksum-checked restore script. Verification notes describe device-testing limits.
                   {" "}<a href={siteConfig.sourceCatalog}>All source downloads <ArrowUpRight size={12} aria-hidden="true" /></a>
                   {" "}<a href={siteConfig.artworkNotes}>Artwork loading update <ArrowUpRight size={12} aria-hidden="true" /></a>
                 </p>

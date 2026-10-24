@@ -210,3 +210,5 @@ Current active preview is 0.2.0-beta1 / code 41, based on tested stable 0.1.9 bu
 Preview 0.2.0-beta1 build 42 fixes Liquid Glass compatibility with themes/asset packs and the separate mini-player. Publish the app preview update before its matching website notice.
 
 Preview build 43 adds Navigation studio: six bottom-bar designs, five finite scroll-player transitions and theme-aware settings previews. Stable app branches and source links remain unchanged.
+
+Preview build 44 fixes stale Library/account responses, concurrent ratings and theme/navigation rendering. Stable source links remain unchanged; focused review notes are linked from the preview release notes.

@@ -208,3 +208,5 @@ Stable build 40 redesigns the immersive picker as a responsive poster gallery wi
 Current active preview is 0.2.0-beta1 / code 41, based on tested stable 0.1.9 build 40. Preview source/checksum/catalog links use preview/0.2.0-beta1. Stable app/version/source links remain unchanged; the previous beta is historical.
 
 Preview 0.2.0-beta1 build 42 fixes Liquid Glass compatibility with themes/asset packs and the separate mini-player. Publish the app preview update before its matching website notice.
+
+Preview build 43 adds Navigation studio: six bottom-bar designs, five finite scroll-player transitions and theme-aware settings previews. Stable app branches and source links remain unchanged.

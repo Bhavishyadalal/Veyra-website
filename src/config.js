@@ -10,6 +10,7 @@ export const siteConfig = Object.freeze({
   website: "https://veyra-website-mauve.vercel.app/",
   appVersion,
   previewVersion,
+  previewCollection: `${repository}/blob/${previewBranch}/themes/previews/chaos-studio/collection.png`,
   repository,
   creator: "https://github.com/Bhavishyadalal",
   websiteRepository: "https://github.com/Bhavishyadalal/Veyra-website",

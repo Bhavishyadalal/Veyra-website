@@ -20,7 +20,7 @@ export const siteConfig = Object.freeze({
   stableNotes: `${repository}/blob/main/RELEASE_NOTES_${appVersion}.md`,
   stablePocketIcons: `${repository}/blob/main/design/launcher/pocket-riot/previews/glass-editions.webp`,
   stableThemes: `${repository}/blob/main/themes/README.md`,
-  stableBuildNotes: `${repository}/blob/main/verification/PATCH-0.2.0-BUILD-51.md`,
+  stableBuildNotes: `${repository}/blob/main/verification/PATCH-0.2.0-BUILD-52.md`,
   stableImmersiveGallery: `${repository}/raw/refs/heads/main/themes/previews/immersive-worlds/expanded-six.webp`,
   stableNightVaultNotes: `${repository}/blob/main/asset-packs/NIGHT_VAULT.md`,
   stableNightVaultIcons: `${repository}/raw/refs/heads/main/design/launcher/night-vault/previews/glass-editions.webp`,

@@ -26,6 +26,7 @@ export default defineConfig(({ mode }) => {
           privacy: page("privacy.html"),
           credits: page("credits.html"),
           media: page("media.html"),
+          resources: page("resources.html"),
         },
       },
     },

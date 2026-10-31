@@ -1,7 +1,7 @@
 /** Keep stable and preview source tracks separate; APK publication is independent. */
 const repository = "https://github.com/Bhavishyadalal/Veyra";
 const appVersion = "0.2.1";
-const previewVersion = "0.2.1-beta1";
+const previewVersion = "0.2.2-beta1";
 const previewBranch = `preview/${previewVersion}`;
 const sourceZip = `${repository}/raw/refs/heads/main/downloads/Veyra_Android_Source_${appVersion}_Stable.zip`;
 const previewSourceZip = `${repository}/raw/refs/heads/${previewBranch}/downloads/Veyra_Android_Source_${previewVersion}.zip`;
@@ -150,7 +150,7 @@ export const siteConfig = Object.freeze({
     ] },
   ],
   previewAtelierIcons: `${repository}/blob/${previewBranch}/design/launcher/atelier/README.md`,
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/PERFORMANCE-UPDATES-0.2.1-BUILD-55.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/BETA-0.2.2-beta1.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/${previewBranch}/downloads/README.md`,
 });

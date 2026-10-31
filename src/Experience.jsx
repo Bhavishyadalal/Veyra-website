@@ -219,6 +219,7 @@ export function FrequencyReel({ reduced, moods, onSelect }) {
 export function GlassDock() {
   const [visible, setVisible] = useState(false);
   const [active, setActive] = useState("experience");
+  const [atDownload, setAtDownload] = useState(false);
   const shown = useRef(false);
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, "change", (value) => {
@@ -242,11 +243,29 @@ export function GlassDock() {
     }
     return () => observer.disconnect();
   }, []);
+  useEffect(() => {
+    const inside = new Set();
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) inside.add(entry.target);
+        else inside.delete(entry.target);
+      }
+      setAtDownload(inside.size > 0);
+    });
+    for (const node of [
+      document.getElementById("download"),
+      document.querySelector("footer"),
+    ]) {
+      if (node) observer.observe(node);
+    }
+    return () => observer.disconnect();
+  }, []);
+  const isShown = visible && !atDownload;
   return (
     <div
-      className={`glass-dock ${visible ? "is-visible" : ""}`}
-      aria-hidden={!visible}
-      inert={!visible}
+      className={`glass-dock ${isShown ? "is-visible" : ""}`}
+      aria-hidden={!isShown}
+      inert={!isShown}
     >
       <GlassSurface
         width="auto"

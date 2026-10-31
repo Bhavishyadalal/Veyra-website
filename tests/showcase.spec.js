@@ -150,29 +150,25 @@ test("scroll stack retains every chapter and real navigation targets", async ({
     .getByRole("link", { name: "Get the Android app", exact: true })
     .click();
   await expect(page).toHaveURL(/#download$/);
-  await expect(
-    page.getByRole("link", { name: "Find Android releases", exact: true }),
-  ).toBeInViewport();
+  await expect(page.locator("#download .launch-primary")).toBeInViewport();
 });
-test("FAQ and external download links are honest and actionable", async ({
+test("download area is focused and separates source projects into the library", async ({
   page,
 }) => {
-  test.setTimeout(120000);
   await page.goto("/");
   await page
     .locator("summary")
     .filter({ hasText: "Where can I download" })
     .click();
-  await expect(page.locator("details[open]")).toContainText(
+  await expect(page.locator(".faq details[open]")).toContainText(
     "not an installable APK",
   );
+  const area = page.locator("#download");
+  await area.scrollIntoViewIfNeeded();
   await expect(
-    page.getByRole("link", { name: "Find Android releases", exact: true }),
+    area.getByRole("link", { name: /THE ANDROID APP Get Veyra/ }),
   ).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/releases");
-  const drive = page.getByRole("link", {
-    name: "Google Drive Alternate APK download",
-    exact: true,
-  });
+  const drive = area.locator(".launch-alternate");
   await expect(drive).toHaveAttribute(
     "href",
     "https://drive.google.com/drive/folders/1KYJ_1LPy3W5Ax5t4R0mw76Mr8xK9SDuS?usp=sharing",
@@ -180,90 +176,25 @@ test("FAQ and external download links are honest and actionable", async ({
   await expect(drive).toHaveAttribute("target", "_blank");
   await expect(drive).toHaveAttribute("rel", "noopener noreferrer");
   await expect(drive).not.toHaveAttribute("download");
-  await expect(page.locator("#drive-download-help")).toContainText(
-    "Opens the APK folder",
+  await expect(area.getByRole("link")).toHaveCount(3);
+  await expect(area).not.toContainText("beta1");
+  await expect(page.locator(".glass-dock")).toHaveAttribute("inert", "");
+  await area.getByRole("link", { name: "Explore the library" }).click();
+  await expect(page).toHaveURL(/resources\.html$/);
+  await expect(
+    page.getByRole("link", { name: "Download stable source" }),
+  ).toHaveAttribute(
+    "href",
+    /main\/downloads\/Veyra_Android_Source_0\.2\.1_Stable\.zip$/,
   );
   await expect(
-    page.getByRole("link", { name: "Android Studio source ZIP", exact: true }),
-  ).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/downloads/Veyra_Android_Source_0.2.1_Stable.zip");
-  await expect(page.locator(".source-track").first()).toContainText("Stable 0.2.1");
-  await expect(page.getByRole("link", { name: "Stable change notes", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/main/RELEASE_NOTES_0.2.1.md");
-  await expect(page.getByRole("link", { name: "Stable themes & icons", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/main/themes/README.md");
-  await expect(page.getByRole("link", { name: "Stable verification notes", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/main/verification/STABLE-0.2.1-PROMOTION.md");
-  await expect(page.getByRole("link", { name: "Preview 0.2.1-beta1 source ZIP", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/downloads/Veyra_Android_Source_0.2.1-beta1.zip");
-  await expect(page.getByRole("link", { name: "Stable source SHA-256 checksum", exact: true }))
-    .toHaveAttribute("href", /0\.2\.1_Stable\.zip\.sha256$/);
-  await expect(page.getByRole("link", { name: "Preview source SHA-256 checksum", exact: true }))
-    .toHaveAttribute("href", /0\.2\.1-beta1\.zip\.sha256$/);
-  await expect(page.getByRole("link", { name: "Preview change notes", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.2.1-beta1/RELEASE_NOTES_0.2.1-beta1.md");
-  await expect(page.getByRole("link", { name: "Themes, icon picker & previews", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.2.1-beta1/themes/README.md");
-  await expect(page.locator(".source-track-preview")).toContainText("for testing");
-  await expect(page.getByRole("link",{ name:"Halloween theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/halloween-nocturne-v3.zip");
-  await expect(page.getByRole("link",{ name:"Web Slinger theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/web-slinger-v1.zip");
-  await expect(page.getByRole("link",{ name:"Midnight Express theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/midnight-express-v1.zip");
-  await expect(page.getByRole("link",{ name:"Astral Tide theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/astral-tide-v1.zip");
-  await expect(page.getByRole("link",{ name:"Playtime Club theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/playtime-club-v1.zip");
-  await expect(page.getByRole("link", { name: "Preview verification notes", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.2.1-beta1/verification/PERFORMANCE-UPDATES-0.2.1-BUILD-55.md");
-  const collection = page.locator(".theme-collection-links").filter({ has: page.locator("summary", { hasText: "Six reference-inspired themes" }) });
-  await expect(collection).not.toHaveAttribute("open", "");
-  await collection.locator("summary").click();
-  await expect(page.getByRole("link", { name: "Pumpkin Purr theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/pumpkin-purr-v2.zip");
-  await expect(page.getByRole("link", { name: "Sunset Crew theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/sunset-crew-v2.zip");
-  await expect(page.getByRole("link", { name: "Starry Spirits theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/starry-spirits-v2.zip");
-  await expect(page.getByRole("link", { name: "Analog Reverie theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/analog-reverie-v2.zip");
-  await expect(page.getByRole("link", { name: "Petal Promise theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/petal-promise-v2.zip");
-  await expect(page.getByRole("link", { name: "Moonlit Herbarium theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/moonlit-herbarium-v2.zip");
-  await page.locator(".wayfarer-links summary").click();
-  await expect(page.getByRole("link", { name: "Golden Afterglow theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/golden-afterglow-v1.zip");
-  await expect(page.getByRole("link", { name: "Lilypond Parade theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/lilypond-parade-v1.zip");
-  await expect(page.getByRole("link", { name: "Dustbyte Outpost theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/dustbyte-outpost-v1.zip");
-  await expect(page.getByRole("link", { name: "Alpine Ember theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/alpine-ember-v1.zip");
-  await expect(page.getByRole("link", { name: "Starfall Pals theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/starfall-pals-v1.zip");
-  await page.locator(".dreamscape-links summary").click();
-  await expect(page.getByRole("link", { name: "Chrome Vesper theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/chrome-vesper-v1.zip");
-  await expect(page.getByRole("link", { name: "Window Wish theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/window-wish-v1.zip");
-  await expect(page.getByRole("link", { name: "Cassette Corner theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/cassette-corner-v1.zip");
-  await expect(page.getByRole("link", { name: "Azure Bloom theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/azure-bloom-v1.zip");
-  await expect(page.getByRole("link", { name: "Strawberry Daydream theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/strawberry-daydream-v1.zip");
-  await page.locator(".worlds-links summary").filter({ hasText: "Glass, lanterns & arcades" }).click();
-  await expect(page.getByRole("link", { name: "Stained Glass Sonata theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/stained-glass-sonata-v1.zip");
-  await expect(page.getByRole("link", { name: "Firefly Railway theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/firefly-railway-v1.zip");
-  await expect(page.getByRole("link", { name: "Porcelain Moon theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/porcelain-moon-v1.zip");
-  await expect(page.getByRole("link", { name: "Black Honey theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/black-honey-v1.zip");
-  await expect(page.getByRole("link", { name: "Sakura Arcade theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/sakura-arcade-v1.zip");
-  await page.locator(".worlds-links summary").filter({ hasText: "Small worlds & machines" }).click();
-  await expect(page.getByRole("link", { name: "Cloud Post Office theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/cloud-post-office-v1.zip");
-  await expect(page.getByRole("link", { name: "Copper Canyon Radio theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/copper-canyon-radio-v1.zip");
-  await expect(page.getByRole("link", { name: "Midnight Aquarium theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/midnight-aquarium-v1.zip");
-  await expect(page.getByRole("link", { name: "Sunday Bakery theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/sunday-bakery-v1.zip");
-  await expect(page.getByRole("link", { name: "Rose Circuit theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/rose-circuit-v1.zip");
-  await page.locator(".worlds-links summary").filter({ hasText: "Craft, winter & cinema" }).click();
-  await expect(page.getByRole("link", { name: "Clockwork Garden theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/clockwork-garden-v1.zip");
-  await expect(page.getByRole("link", { name: "Snowglobe Village theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/snowglobe-village-v1.zip");
-  await expect(page.getByRole("link", { name: "Indigo Atelier theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/indigo-atelier-v1.zip");
-  await expect(page.getByRole("link", { name: "Prism Playground theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/prism-playground-v1.zip");
-  await expect(page.getByRole("link", { name: "Silent Cinema theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/silent-cinema-v1.zip");
-  await page.locator(".worlds-links summary").filter({ hasText: "Quiet Horizons \u00b7 image collection" }).click();
-  await expect(page.getByRole("link", { name: "Riverside Pause theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/riverside-pause-v1.zip");
-  await expect(page.getByRole("link", { name: "Pixel Stargazer theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/pixel-stargazer-v1.zip");
-  await expect(page.getByRole("link", { name: "Roaming Cosmos theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/roaming-cosmos-v1.zip");
-  await expect(page.getByRole("link", { name: "Blue Hour Sanctuary theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/blue-hour-sanctuary-v1.zip");
-  await expect(page.getByRole("link", { name: "Celestial Current theme ZIP (latest beta)", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/celestial-current-v1.zip");
-  await page.getByText("Five Keepsake themes · stable 0.1.7 compatible", { exact: true }).click();
-  await expect(page.getByRole("link", { name: "Patchwork Picnic theme ZIP", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/themes/packs/patchwork-picnic-v1.zip");
-  await expect(page.getByRole("link", { name: "Clover Requiem theme ZIP", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/themes/packs/clover-requiem-v1.zip");
-  await expect(page.getByRole("link", { name: "Sunroom Mixtape theme ZIP", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/themes/packs/sunroom-mixtape-v1.zip");
-  await expect(page.getByRole("link", { name: "Concrete Afterhours theme ZIP", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/themes/packs/concrete-afterhours-v1.zip");
-  await expect(page.getByRole("link", { name: "Matcha Mischief theme ZIP", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/main/themes/packs/matcha-mischief-v1.zip");
-  await expect(page.getByRole("link", { name: "12 standalone Glass Atelier icons", exact: true })).toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.2.1-beta1/design/launcher/atelier/README.md");
-  await expect(page.locator(".download-note")).toContainText("not APKs");
+    page.getByRole("link", { name: "Download beta source" }),
+  ).toHaveAttribute(
+    "href",
+    /preview\/0\.2\.2-beta1\/downloads\/Veyra_Android_Source_0\.2\.2-beta1\.zip$/,
+  );
 });
+
 test("mobile navigation opens, closes and restores keyboard focus", async ({
   page,
 }, testInfo) => {
@@ -274,11 +205,16 @@ test("mobile navigation opens, closes and restores keyboard focus", async ({
   await page.goto("/");
   const toggle = page.getByRole("button", { name: "Open menu", exact: true });
   await toggle.click();
-  await expect(page.getByRole("navigation")).toBeVisible();
+  await expect(
+    page.getByRole("navigation", { name: "Main navigation", exact: true }),
+  ).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(toggle).toBeFocused();
   await toggle.click();
-  await page.getByRole("link", { name: "Inside Veyra", exact: true }).click();
+  await page
+    .getByRole("navigation", { name: "Main navigation", exact: true })
+    .getByRole("link", { name: "Inside Veyra", exact: true })
+    .click();
   await expect(
     page.getByRole("button", { name: "Open menu", exact: true }),
   ).toHaveAttribute("aria-expanded", "false");

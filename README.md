@@ -14,8 +14,8 @@ React · Motion · React Bits · GSAP · Tailwind · Original generated artwork
 
 ## Current Android source links
 
-The website links stable **0.2.0** to the app repository's `main` source ZIP and
-completed preview **0.2.0-beta1** to its separate preview branch, with SHA-256 checksums,
+The website links stable **0.2.1** to the app repository's `main` source ZIP and
+current preview **0.2.2-beta1** to its separate preview branch, with SHA-256 checksums,
 preview change notes and the retained-source catalog. These links are Android
 Studio source projects, not APK downloads. GitHub Releases and the owner's
 Google Drive folder remain separate APK options; check the asset's actual version.
@@ -25,9 +25,13 @@ push corresponding website updates. See [the maintenance rules](AGENTS.md).
 The source links were checked against the actual app Git branch trees; APK
 availability and the Google Drive folder's current contents were not verified.
 
-The preview source also links its [build-log review](https://github.com/Bhavishyadalal/Veyra/blob/preview/0.1.6-beta1/verification/BUILD-WARNINGS-0.1.6-beta1.md),
-which describes compiler/API cleanup, targeted regression checks and the remaining
-full Android build limitation. This is a refreshed source package, not a new APK release.
+## A quieter download flow and a dedicated library
+
+The landing page now keeps only the Android release and alternate Drive choices, followed by one library link. Source ZIPs, beta builds and individual theme packs no longer crowd the page bottom. The footer groups Explore, Project and legal/provenance links. Floating shortcut navigation retires near downloads/footer so it cannot cover these controls.
+
+`resources.html` is a separate, independently bundled page. Keyboard-accessible tabs organize Builds, Themes & overlays, Icons & artwork and Project. Collections open on demand; search expands matching items and offers clear empty-state recovery. Stable/preview source/checksum/notes links remain distinct. Its title, canonical and sharing metadata are page-specific. No new external asset requests, tracking or account requirements are introduced.
+
+[Design and validation notes](docs/LIBRARY-REDESIGN.md). Previous release notes below are historical; `src/config.js` defines the current tracks.
 
 ## New: coordinated artwork and sharing cards
 

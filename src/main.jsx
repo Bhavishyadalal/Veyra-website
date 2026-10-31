@@ -61,6 +61,7 @@ import ShinyText from "./components/ShinyText";
 import "./styles/base.css";
 import "./styles/atmosphere.css";
 import "./styles/refraction.css";
+import "./styles/collection.css";
 import DepthScene from "./DepthScene";
 /** Decorative, locally rendered Google Drive mark; no external icon request. */
 function GoogleDriveIcon() {
@@ -345,8 +346,8 @@ function App() {
             <a href="#inside" onClick={() => setMenu(false)}>
               Inside Veyra
             </a>
-            <a href={siteConfig.repository} target="_blank" rel="noreferrer">
-              Open source <ArrowUpRight size={14} />
+            <a href="./resources.html" onClick={() => setMenu(false)}>
+              The library <ArrowUpRight size={14} />
             </a>
           </nav>
           <div className="header-actions">
@@ -1179,10 +1180,10 @@ function App() {
                 },
                 {
                   q: "Can I explore the source?",
-                  a: "Yes. The Android repository and source archive are linked below. Check the repository licensing and provider requirements before modifying or redistributing the app.",
+                  a: "Yes. Open the library for stable and beta source projects, checksums, themes and icons. Check repository licensing and provider requirements before modifying or redistributing the app.",
                 },
               ].map((f) => (
-                <details key={f.q}>
+                <details key={f.q} name="veyra-questions">
                   <summary>
                     {f.q}
                     <Plus size={20} />
@@ -1192,263 +1193,165 @@ function App() {
               ))}
             </div>
           </section>
-          <section className="download-section section-shell" id="download">
-            <div className="download-top">
-              <p className="eyebrow">THIS IS YOUR CUE.</p>
-              <span>
-                MADE FOR ANDROID <ArrowUpRight size={18} />
-              </span>
-            </div>
-            <Reveal>
-              <h2>
-                Your next
-                <br />
-                <em>favorite feeling.</em>
-              </h2>
-            </Reveal>
-            <div className="download-bottom">
-              <div>
-                <p>
-                  Take Veyra with you.
-                  <br />A whole world is waiting in your headphones.
-                </p>
-                <div className="download-actions">
-                  <a
-                    className="download-main"
-                    href={siteConfig.releases}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Find Android releases <ArrowUpRight size={20} />
-                  </a>
-                  <a
-                    className="download-drive"
-                    href={siteConfig.driveFolder}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-describedby="drive-download-help"
-                  >
-                    <span className="drive-icon">
-                      <GoogleDriveIcon />
-                    </span>
-                    <span className="drive-copy">
-                      <strong>Google Drive</strong>
-                      <span>Alternate APK download</span>
-                    </span>
-                    <ArrowUpRight
-                      className="drive-arrow"
-                      size={20}
-                      aria-hidden="true"
-                    />
-                  </a>
-                </div>
-                <p className="drive-help" id="drive-download-help">
-                  Opens the APK folder in a new tab. Choose the APK to download.
-                  {" "}Check its filename for the version.
-                </p>
-                <div className="download-source-row">
-                  <div className="source-track">
-                    <span className="source-track-label">Stable {siteConfig.appVersion}</span>
-                    <div className="source-track-links">
-                      <a className="source-link" href={siteConfig.sourceZip}>
-                        <Download size={17} aria-hidden="true" /> Android Studio source ZIP
-                      </a>
-                      <a href={siteConfig.sourceChecksum} aria-label="Stable source SHA-256 checksum">SHA-256</a>
-                      <a href={siteConfig.stableNotes}>Stable change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.stableThemes}>Stable themes &amp; icons <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.stablePocketIcons}>27 new glass icons <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.stableBuildNotes}>Stable verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.stableImmersiveGallery}>Six new immersive worlds · actual app previews <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <details className="theme-collection-links">
-                        <summary>Night Vault · ten gothic and punk packs · glass icons in build 39</summary>
-                        <div className="source-track-links">
-                          <a href={siteConfig.stableNightVaultNotes}>Actual assets, ten glass waveform icons, fonts and compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          <a href={siteConfig.stableNightVaultIcons}>Ten glass launcher icons · actual bundled artwork <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          <a href={siteConfig.stableNightVaultBoard}>AI concept direction · shipped specimens in pack notes <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          {siteConfig.stableNightVaultPacks.map(pack => (
-                            <a key={pack.name} href={pack.url}>{pack.name} asset ZIP <Download size={12} aria-hidden="true" /></a>
-                          ))}
-                        </div>
-                      </details>
-                    </div>
-                  </div>
-                  <div className="source-track source-track-preview">
-                    <span className="source-track-label">Beta preview · for testing</span>
-                    <div className="source-track-links">
-                      <a className="source-link" href={siteConfig.previewSourceZip}>
-                        <Download size={17} aria-hidden="true" /> Preview {siteConfig.previewVersion} source ZIP
-                      </a>
-                      <a href={siteConfig.previewChecksum} aria-label="Preview source SHA-256 checksum">SHA-256</a>
-                      <a href={siteConfig.previewSketchTheme}>Margin Notes sketch theme · beta build 30 <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewSketchAssets}>Preview every sketch asset <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewSketchNotes}>Sketch motion & compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewCollection}>Pocket Riot assets <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewNotes}>Preview change notes <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewUiNotes}>Themes, icon picker & previews <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewThemePack}>Halloween theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewWebThemePack}>Web Slinger theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewMidnightThemePack}>Midnight Express theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewAstralThemePack}>Astral Tide theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewPlaytimeThemePack}>Playtime Club theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
-                      <details className="theme-collection-links">
-                        <summary>Layer Lab · five independent asset packs · build 33</summary>
-                        <div className="source-track-links">
-                          <a href={siteConfig.previewIconNotes}>Build 35 · 21 matching icons and live Home selection <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          <a href={siteConfig.previewIconGallery}>View all 21 real app icons <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          <a href={siteConfig.previewPerformanceNotes}>Build 34 · asset rendering and verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          <a href={siteConfig.previewAssetNotes}>Layer over any theme · real assets and compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          <a href={siteConfig.previewAssetBoard}>View AI art direction · actual specimens in pack notes <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          {siteConfig.previewAssetPacks.map(pack => (
-                            <a key={pack.name} href={pack.url}>{pack.name} asset ZIP · build 33 <Download size={12} aria-hidden="true" /></a>
-                          ))}
-                        </div>
-                      </details>
-                      <details className="theme-collection-links">
-                        <summary>Punk Worlds · five full-color themes · build 32</summary>
-                        <div className="source-track-links">
-                          <a href={siteConfig.previewPunkAssets}>Compare the five punk themes <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          <a href={siteConfig.previewPunkNotes}>Real fonts, 123 asset roles & build-32 compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          {siteConfig.previewPunkThemes.map(theme => (
-                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP · build 32 <Download size={12} aria-hidden="true" /></a>
-                          ))}
-                        </div>
-                      </details>
-                      <details className="theme-collection-links">
-                        <summary>Advanced Worlds · five complete control themes · build 31</summary>
-                        <div className="source-track-links">
-                          <a href={siteConfig.previewAdvancedAssets}>Compare the five new worlds <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          <a href={siteConfig.previewAdvancedNotes}>119 asset roles, progress styles & build-31 compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          {siteConfig.previewAdvancedThemes.map(theme => (
-                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP · build 31 <Download size={12} aria-hidden="true" /></a>
-                          ))}
-                        </div>
-                      </details>
-                      <details className="theme-collection-links">
-                        <summary>Illustrated Worlds · five special beta themes</summary>
-                        <div className="source-track-links">
-                          <a href={siteConfig.previewIllustratedAssets}>Compare all five illustrated worlds <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          <a href={siteConfig.previewIllustratedNotes}>Assets, native presets & build-30 compatibility <ArrowUpRight size={12} aria-hidden="true" /></a>
-                          {siteConfig.previewIllustratedThemes.map(theme => (
-                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP · build 30 <Download size={12} aria-hidden="true" /></a>
-                          ))}
-                        </div>
-                      </details>
-                      <details className="theme-collection-links">
-                        <summary>Six reference-inspired themes</summary>
-                        <div className="source-track-links">
-                          {siteConfig.previewReferenceThemes.map(theme => (
-                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
-                          ))}
-                        </div>
-                      </details>
-                      <details className="theme-collection-links wayfarer-links">
-                        <summary>Five Wayfarer themes</summary>
-                        <div className="source-track-links">
-                          {siteConfig.previewWayfarerThemes.map(theme => (
-                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
-                          ))}
-                        </div>
-                      </details>
-                      <details className="theme-collection-links dreamscape-links">
-                        <summary>Five Dreamscape themes</summary>
-                        <div className="source-track-links">
-                          {siteConfig.previewDreamscapeThemes.map(theme => (
-                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
-                          ))}
-                        </div>
-                      </details>
-                      <details className="theme-collection-links keepsake-links">
-                        <summary>Five Keepsake themes · stable 0.1.7 compatible</summary>
-                        <div className="source-track-links">
-                          {siteConfig.keepsakeThemes.map(theme => (
-                            <a key={theme.name} href={theme.url}>{theme.name} theme ZIP <Download size={12} aria-hidden="true" /></a>
-                          ))}
-                        </div>
-                      </details>
-                      {siteConfig.previewWorldCollections.map(collection => (
-                        <details key={collection.title} className="theme-collection-links worlds-links">
-                          <summary>{collection.title}</summary>
-                          <div className="source-track-links">
-                            {collection.themes.map(theme => (
-                              <a key={theme.name} href={theme.url}>{theme.name} theme ZIP (latest beta) <Download size={12} aria-hidden="true" /></a>
-                            ))}
-                          </div>
-                        </details>
-                      ))}
-                      <a href={siteConfig.previewAtelierIcons}>12 standalone Glass Atelier icons <ArrowUpRight size={12} aria-hidden="true" /></a>
-                      <a href={siteConfig.previewBuildNotes}>Preview verification notes <ArrowUpRight size={12} aria-hidden="true" /></a>
-                    </div>
-                  </div>
-                </div>
-                <p className="download-note">
-                  Stable 0.2.1 build 56 makes the immersive style picker lazy, delays poster artwork until its sheet settles, pauses scene motion behind the picker and applies selections after dismissal. All new audio downloads go to Internal storage → Music → Veyra; the retired private-storage preference is ignored, including after backup restoration. Existing private audio remains safe and can be copied with Export all downloads. Stable retains the automatic update option, current waveform notifications, welcome and Settings fixes, 12 immersive modes, 72 themes, 32 overlays and 132 launcher choices. Completed preview 0.2.1-beta1 build 55 remains on its frozen branch. Source ZIPs are Android Studio projects, not APKs. APK publication and physical-device testing are separate; verification notes describe the checks and limits.
-                </p>
-                <div className="share-frequency">
-                  <button
-                    type="button"
-                    className="share-veyra"
-                    onClick={copyWebsiteLink}
-                  >
-                    <Copy size={16} aria-hidden="true" /> Copy website link
-                  </button>
-                  <span>A good find deserves company.</span>
-                </div>
-                {manualShare && (
-                  <label className="manual-share">
-                    Select and copy the website link
-                    <input
-                      ref={shareInput}
-                      readOnly
-                      value={siteConfig.website}
-                      aria-label="Website link to copy"
-                      onClick={(event) => event.currentTarget.select()}
-                    />
-                  </label>
-                )}
-              </div>
-              <a
-                className="source-badge"
-                href={siteConfig.repository}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Github size={25} />
-                <span>
-                  OPEN SOURCE.
+          <section
+            className="launch-section section-shell"
+            id="download"
+            aria-labelledby="launch-title"
+          >
+            <div className="launch-heading">
+              <Reveal>
+                <p className="eyebrow">TAKE THE FEELING WITH YOU</p>
+                <h2 id="launch-title">
+                  Your music.
                   <br />
-                  <strong>OPEN POSSIBILITIES.</strong>
+                  <em>Everywhere.</em>
+                </h2>
+                <p className="launch-intro">
+                  A space for the songs you love. A little closer, wherever you
+                  go.
+                </p>
+              </Reveal>
+              <div className="launch-orbit" aria-hidden="true">
+                <img
+                  src="/brand/favicon.png"
+                  alt=""
+                  width="112"
+                  height="112"
+                  loading="lazy"
+                />
+                <span>MADE FOR YOUR EVERYDAY</span>
+              </div>
+            </div>
+            <div className="launch-options">
+              <a
+                className="launch-primary"
+                href={siteConfig.releases}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="launch-option-icon">
+                  <Download size={24} />
                 </span>
-                <ArrowUpRight size={20} />
+                <span>
+                  <small>THE ANDROID APP</small>
+                  <strong>Get Veyra</strong>
+                  <span>Find a published APK on GitHub Releases.</span>
+                </span>
+                <ArrowUpRight size={24} aria-hidden="true" />
+              </a>
+              <a
+                className="launch-alternate"
+                href={siteConfig.driveFolder}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-describedby="drive-download-help"
+              >
+                <span className="launch-option-icon">
+                  <GoogleDriveIcon />
+                </span>
+                <span>
+                  <small>ANOTHER WAY IN</small>
+                  <strong>Google Drive</strong>
+                  <span>Open the alternate APK folder.</span>
+                </span>
+                <ArrowUpRight size={24} aria-hidden="true" />
               </a>
             </div>
+            <p className="launch-help" id="drive-download-help">
+              Android 8.0 or later. Choose an APK and check its filename for the
+              version.
+            </p>
+            <div className="launch-library">
+              <div>
+                <span className="launch-library-icon">
+                  <Folder size={23} />
+                </span>
+                <span>
+                  <strong>A little more curious?</strong>
+                  <p>
+                    Source projects, beta builds, themes and icons — all in one
+                    place.
+                  </p>
+                </span>
+              </div>
+              <a href="./resources.html">
+                Explore the library <ArrowRight size={18} />
+              </a>
+            </div>
+            <div className="launch-share">
+              <span>A good find deserves company.</span>
+              <button
+                type="button"
+                className="share-veyra"
+                onClick={copyWebsiteLink}
+              >
+                <Copy size={15} aria-hidden="true" /> Copy website link
+              </button>
+            </div>
+            {manualShare && (
+              <label className="manual-share">
+                Select and copy the website link
+                <input
+                  ref={shareInput}
+                  readOnly
+                  value={siteConfig.website}
+                  aria-label="Website link to copy"
+                  onClick={(event) => event.currentTarget.select()}
+                />
+              </label>
+            )}
           </section>
         </main>
-        <footer className="footer section-shell">
-          <div className="footer-main">
-            <Logo large />
-            <a href="#top">
-              Back to the surface <ArrowUpRight size={19} />
+        <footer className="footer site-footer section-shell">
+          <div className="footer-signature">
+            <div>
+              <Logo large />
+              <p>Built for listening. Designed for feeling.</p>
+            </div>
+            <a className="footer-up" href="#top" aria-label="Back to the top">
+              <ArrowUpRight size={23} />
             </a>
           </div>
-          <p className="footer-credit">
-            Made by{" "}
-            <a href={siteConfig.creator}>
-              Bhavishya Dalal <ArrowUpRight size={18} aria-hidden="true" />
-            </a>
-          </p>
-          <div className="footer-bottom">
-            <div>
-              <a href="./privacy.html">Website privacy</a>
-              <a href="./credits.html">Credits</a>
-              <a href="./media.html">Media kit</a>
+          <div className="footer-navigation">
+            <div className="footer-maker">
+              <span className="eyebrow">AN INDEPENDENT MUSIC EXPERIENCE</span>
+              <p>
+                Made with intention.
+                <br />
+                By{" "}
+                <a href={siteConfig.creator}>
+                  Bhavishya Dalal <ArrowUpRight size={13} />
+                </a>
+              </p>
+            </div>
+            <nav aria-label="Explore Veyra">
+              <h3>Explore</h3>
+              <a href="#experience">The experience</a>
+              <a href="#inside">Inside Veyra</a>
+              <a href="./resources.html">The library</a>
+            </nav>
+            <nav aria-label="Veyra project">
+              <h3>The project</h3>
               <a href={siteConfig.repository}>
-                GitHub <ArrowUpRight size={13} />
+                App source <ArrowUpRight size={13} />
               </a>
               <a href={siteConfig.websiteRepository}>
                 Website source <ArrowUpRight size={13} />
               </a>
-            </div>
+              <a href="./media.html">Media kit</a>
+            </nav>
+            <nav aria-label="Website information">
+              <h3>Good to know</h3>
+              <a href="./privacy.html">Website privacy</a>
+              <a href="./credits.html">Credits & licenses</a>
+            </nav>
+          </div>
+          <div className="footer-finish">
+            <span>© {new Date().getFullYear()} Veyra</span>
             <span>LISTEN A LITTLE DIFFERENT.</span>
+            <span>
+              Made for Android <Music2 size={13} />
+            </span>
           </div>
         </footer>
         <AnimatePresence>

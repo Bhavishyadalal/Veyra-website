@@ -23,13 +23,15 @@ export function resolveSocialMetadata(siteUrl = "", page = "index.html") {
     base = url.href.endsWith("/") ? url.href : url.href + "/";
   }
   const title =
-    page === "media.html"
-      ? "Veyra — Media kit & artwork"
-      : page === "privacy.html"
-        ? "Veyra — Website privacy"
-        : page === "credits.html"
-          ? "Veyra — Credits & licenses"
-          : socialSettings.title;
+    page === "resources.html"
+      ? "Veyra — Builds & creative library"
+      : page === "media.html"
+        ? "Veyra — Media kit & artwork"
+        : page === "privacy.html"
+          ? "Veyra — Website privacy"
+          : page === "credits.html"
+            ? "Veyra — Credits & licenses"
+            : socialSettings.title;
   return {
     title,
     description: socialSettings.description,
@@ -53,6 +55,7 @@ export function socialMetadata(siteUrl = "") {
             "media.html",
             "privacy.html",
             "credits.html",
+            "resources.html",
           ].includes(page)
         )
           return html;

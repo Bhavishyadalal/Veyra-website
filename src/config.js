@@ -150,7 +150,7 @@ export const siteConfig = Object.freeze({
     ] },
   ],
   previewAtelierIcons: `${repository}/blob/${previewBranch}/design/launcher/atelier/README.md`,
-  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/DOWNLOADS-${previewVersion}.md`,
+  previewBuildNotes: `${repository}/blob/${previewBranch}/verification/PERFORMANCE-UPDATES-0.2.1-BUILD-55.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
   sourceCatalog: `${repository}/blob/${previewBranch}/downloads/README.md`,
 });

@@ -209,7 +209,7 @@ test("FAQ and external download links are honest and actionable", async ({
   await expect(page.getByRole("link",{ name:"Astral Tide theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/astral-tide-v1.zip");
   await expect(page.getByRole("link",{ name:"Playtime Club theme ZIP (latest beta)",exact:true })).toHaveAttribute("href","https://github.com/Bhavishyadalal/Veyra/raw/refs/heads/preview/0.2.1-beta1/themes/packs/playtime-club-v1.zip");
   await expect(page.getByRole("link", { name: "Preview verification notes", exact: true }))
-    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.2.1-beta1/verification/DOWNLOADS-0.2.1-beta1.md");
+    .toHaveAttribute("href", "https://github.com/Bhavishyadalal/Veyra/blob/preview/0.2.1-beta1/verification/PERFORMANCE-UPDATES-0.2.1-BUILD-55.md");
   const collection = page.locator(".theme-collection-links").filter({ has: page.locator("summary", { hasText: "Six reference-inspired themes" }) });
   await expect(collection).not.toHaveAttribute("open", "");
   await collection.locator("summary").click();

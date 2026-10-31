@@ -1,6 +1,6 @@
 /** Keep stable and preview source tracks separate; APK publication is independent. */
 const repository = "https://github.com/Bhavishyadalal/Veyra";
-const appVersion = "0.2.0";
+const appVersion = "0.2.1";
 const previewVersion = "0.2.1-beta1";
 const previewBranch = `preview/${previewVersion}`;
 const sourceZip = `${repository}/raw/refs/heads/main/downloads/Veyra_Android_Source_${appVersion}_Stable.zip`;
@@ -20,7 +20,7 @@ export const siteConfig = Object.freeze({
   stableNotes: `${repository}/blob/main/RELEASE_NOTES_${appVersion}.md`,
   stablePocketIcons: `${repository}/blob/main/design/launcher/pocket-riot/previews/glass-editions.webp`,
   stableThemes: `${repository}/blob/main/themes/README.md`,
-  stableBuildNotes: `${repository}/blob/main/verification/UX-0.2.0-BUILD-53.md`,
+  stableBuildNotes: `${repository}/blob/main/verification/STABLE-0.2.1-PROMOTION.md`,
   stableImmersiveGallery: `${repository}/raw/refs/heads/main/themes/previews/immersive-worlds/expanded-six.webp`,
   stableNightVaultNotes: `${repository}/blob/main/asset-packs/NIGHT_VAULT.md`,
   stableNightVaultIcons: `${repository}/raw/refs/heads/main/design/launcher/night-vault/previews/glass-editions.webp`,

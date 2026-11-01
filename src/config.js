@@ -1,6 +1,6 @@
 /** Keep stable and preview source tracks separate; APK publication is independent. */
 const repository = "https://github.com/Bhavishyadalal/Veyra";
-const appVersion = "0.2.1";
+const appVersion = "0.2.2";
 const previewVersion = "0.2.2-beta1";
 const previewBranch = `preview/${previewVersion}`;
 const sourceZip = `${repository}/raw/refs/heads/main/downloads/Veyra_Android_Source_${appVersion}_Stable.zip`;
@@ -20,7 +20,7 @@ export const siteConfig = Object.freeze({
   stableNotes: `${repository}/blob/main/RELEASE_NOTES_${appVersion}.md`,
   stablePocketIcons: `${repository}/blob/main/design/launcher/pocket-riot/previews/glass-editions.webp`,
   stableThemes: `${repository}/blob/main/themes/README.md`,
-  stableBuildNotes: `${repository}/blob/main/verification/STABLE-0.2.1-PROMOTION.md`,
+  stableBuildNotes: `${repository}/blob/main/verification/STABLE-0.2.2-PROMOTION.md`,
   stableImmersiveGallery: `${repository}/raw/refs/heads/main/themes/previews/immersive-worlds/expanded-six.webp`,
   stableNightVaultNotes: `${repository}/blob/main/asset-packs/NIGHT_VAULT.md`,
   stableNightVaultIcons: `${repository}/raw/refs/heads/main/design/launcher/night-vault/previews/glass-editions.webp`,
@@ -152,5 +152,5 @@ export const siteConfig = Object.freeze({
   previewAtelierIcons: `${repository}/blob/${previewBranch}/design/launcher/atelier/README.md`,
   previewBuildNotes: `${repository}/blob/${previewBranch}/verification/BETA-0.2.2-beta1.md`,
   artworkNotes: `${repository}/blob/main/docs/ARTWORK_LOADING.md`,
-  sourceCatalog: `${repository}/blob/${previewBranch}/downloads/README.md`,
+  sourceCatalog: `${repository}/blob/main/downloads/README.md`,
 });

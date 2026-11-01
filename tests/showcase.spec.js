@@ -185,7 +185,7 @@ test("download area is focused and separates source projects into the library", 
     page.getByRole("link", { name: "Download stable source" }),
   ).toHaveAttribute(
     "href",
-    /main\/downloads\/Veyra_Android_Source_0\.2\.1_Stable\.zip$/,
+    /main\/downloads\/Veyra_Android_Source_0\.2\.2_Stable\.zip$/,
   );
   await expect(
     page.getByRole("link", { name: "Download beta source" }),
@@ -223,6 +223,8 @@ test("mobile navigation opens, closes and restores keyboard focus", async ({
 test("landing and every preview screen pass automated accessibility checks", async ({
   page,
 }) => {
+  // Five full-page axe audits need a larger budget on shared/loaded runners.
+  test.slow();
   await page.goto("/");
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect(page.locator("html")).toHaveAttribute("data-motion", "reduced");

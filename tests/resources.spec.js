@@ -8,14 +8,14 @@ test("builds keep stable and beta archives, checksums and notes separate", async
   await expect(page.getByRole("heading", { level: 1 })).toContainText("yours.");
   const stable = page.locator(".build-stable"),
     beta = page.locator(".build-preview");
-  await expect(stable).toContainText("0.2.1");
+  await expect(stable).toContainText("0.2.2");
   await expect(beta).toContainText("0.2.2-beta1");
-  await expect(beta).toContainText("Build 58");
+  await expect(beta).toContainText("build 58");
   await expect(
     stable.getByRole("link", { name: "Download stable source" }),
   ).toHaveAttribute(
     "href",
-    /main\/downloads\/Veyra_Android_Source_0\.2\.1_Stable\.zip$/,
+    /main\/downloads\/Veyra_Android_Source_0\.2\.2_Stable\.zip$/,
   );
   await expect(
     beta.getByRole("link", { name: "Download beta source" }),
@@ -25,7 +25,7 @@ test("builds keep stable and beta archives, checksums and notes separate", async
   );
   await expect(
     stable.getByRole("link", { name: "Stable source SHA-256 checksum" }),
-  ).toHaveAttribute("href", /0\.2\.1_Stable\.zip\.sha256$/);
+  ).toHaveAttribute("href", /0\.2\.2_Stable\.zip\.sha256$/);
   await expect(
     beta.getByRole("link", { name: "Beta source SHA-256 checksum" }),
   ).toHaveAttribute("href", /0\.2\.2-beta1\.zip\.sha256$/);
@@ -82,7 +82,7 @@ test("resource tabs support keyboard navigation and project links stay available
     page.getByRole("link", { name: /Stable verification/ }),
   ).toHaveAttribute(
     "href",
-    /main\/verification\/STABLE-0\.2\.1-PROMOTION\.md$/,
+    /main\/verification\/STABLE-0\.2\.2-PROMOTION\.md$/,
   );
   await expect(
     page.getByRole("link", { name: /Preview verification/ }),

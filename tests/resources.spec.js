@@ -10,6 +10,7 @@ test("builds keep stable and beta archives, checksums and notes separate", async
     beta = page.locator(".build-preview");
   await expect(stable).toContainText("0.2.1");
   await expect(beta).toContainText("0.2.2-beta1");
+  await expect(beta).toContainText("Build 58");
   await expect(
     stable.getByRole("link", { name: "Download stable source" }),
   ).toHaveAttribute(

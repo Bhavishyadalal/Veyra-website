@@ -49,7 +49,7 @@ export const siteConfig = Object.freeze({
   previewNotes: `${repository}/blob/${previewBranch}/RELEASE_NOTES_${previewVersion}.md`,
   previewIconNotes: `${repository}/blob/${previewBranch}/design/launcher/collections/README.md`,
   previewIconGallery: `${repository}/raw/refs/heads/${previewBranch}/design/launcher/collections/previews/collection.png`,
-  previewPerformanceNotes: `${repository}/blob/${previewBranch}/verification/ASSET-PERFORMANCE-0.1.9-beta1.md`,
+  previewPerformanceNotes: `${repository}/blob/${previewBranch}/verification/BETA-0.2.2-beta1.md`,
   previewAssetNotes: `${repository}/blob/${previewBranch}/asset-packs/README.md`,
   previewAssetBoard: `${repository}/raw/refs/heads/${previewBranch}/asset-packs/previews/art-direction.png`,
   previewAssetPacks: [

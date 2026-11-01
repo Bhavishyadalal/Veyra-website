@@ -259,7 +259,7 @@ function BuildCard({ preview = false }) {
       </p>
       <p>
         {preview
-          ? "The latest stable fixes on the next testing track. Expect changes before a stable release."
+          ? "Build 58 tests tap-to-type Search, first-launch appearance preparation and lighter navigation rendering. Expect changes before a stable release."
           : "The current stable Android Studio project, including the immersive picker and shared-download fixes."}
       </p>
       <a

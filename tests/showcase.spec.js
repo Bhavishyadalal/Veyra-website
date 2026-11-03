@@ -191,7 +191,7 @@ test("download area is focused and separates source projects into the library", 
     page.getByRole("link", { name: "Download beta source" }),
   ).toHaveAttribute(
     "href",
-    /preview\/0\.2\.2-beta1\/downloads\/Veyra_Android_Source_0\.2\.2-beta1\.zip$/,
+    /preview\/0\.2\.3-beta1\/downloads\/Veyra_Android_Source_0\.2\.3-beta1\.zip$/,
   );
 });
 

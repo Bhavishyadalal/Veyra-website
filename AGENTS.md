@@ -6,8 +6,8 @@
 - The public website is `https://veyra-website-mauve.vercel.app/`. Keep canonical,
   Open Graph/Twitter images, sharing actions and banner links consistent when it changes.
 - Centralize app/download/creator/repository links in `src/config.js`. Current
-  stable source is 0.2.2 on app `main` / `stable/0.2.2`; completed preview source is 0.2.2-beta1 on
-  `preview/0.2.2-beta1`. Verify the actual remote app branches/files before updating.
+  stable source is 0.2.2 on app `main` / `stable/0.2.2`; current preview source is 0.2.3-beta1 on
+  `preview/0.2.3-beta1`. Verify the actual remote app branches/files before updating.
 - Stable and preview are distinct tracks. Never silently promote preview as stable.
   Source ZIPs are Android Studio projects, not APKs. Do not claim an APK exists or
   assign an unverified version to the owner's Drive folder. Preserve its given URL
@@ -19,3 +19,6 @@
 - Run `npm run build`, `npm run typecheck` and relevant desktop/mobile Playwright
   checks after changes. A Git push does not prove Vercel has deployed successfully;
   distinguish local checks, remote files and live deployment status.
+
+- The owner runs GitHub workflows manually. Do not dispatch/rerun Actions unless
+  explicitly asked; use [skip ci] on push commits so automatic checks stay idle.

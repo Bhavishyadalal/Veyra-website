@@ -247,7 +247,7 @@ function BuildCard({ preview = false }) {
     >
       <div className="build-card-top">
         <span className="build-status">
-          {preview ? "COMPLETED BETA" : "RECOMMENDED SOURCE"}
+          {preview ? "FOR TESTING" : "RECOMMENDED SOURCE"}
         </span>
         <span className="build-mark">
           {preview ? "β" : <Check size={20} />}
@@ -259,7 +259,7 @@ function BuildCard({ preview = false }) {
       </p>
       <p>
         {preview
-          ? "Completed beta build 58, retained for reference. Stable 0.2.2 includes these improvements and additional startup recovery fixes."
+          ? "Beta build 60 adds a saved reduced-effects profile, opaque surfaces and a post-welcome choice, based on stable 0.2.2."
           : "Stable build 59 brings tap-to-type Search, appearance preparation and lighter navigation rendering, with startup recovery and gallery layout fixes."}
       </p>
       <a

@@ -9,8 +9,8 @@ test("builds keep stable and beta archives, checksums and notes separate", async
   const stable = page.locator(".build-stable"),
     beta = page.locator(".build-preview");
   await expect(stable).toContainText("0.2.2");
-  await expect(beta).toContainText("0.2.2-beta1");
-  await expect(beta).toContainText("build 58");
+  await expect(beta).toContainText("0.2.3-beta1");
+  await expect(beta).toContainText("build 60");
   await expect(
     stable.getByRole("link", { name: "Download stable source" }),
   ).toHaveAttribute(
@@ -21,14 +21,14 @@ test("builds keep stable and beta archives, checksums and notes separate", async
     beta.getByRole("link", { name: "Download beta source" }),
   ).toHaveAttribute(
     "href",
-    /preview\/0\.2\.2-beta1\/downloads\/Veyra_Android_Source_0\.2\.2-beta1\.zip$/,
+    /preview\/0\.2\.3-beta1\/downloads\/Veyra_Android_Source_0\.2\.3-beta1\.zip$/,
   );
   await expect(
     stable.getByRole("link", { name: "Stable source SHA-256 checksum" }),
   ).toHaveAttribute("href", /0\.2\.2_Stable\.zip\.sha256$/);
   await expect(
     beta.getByRole("link", { name: "Beta source SHA-256 checksum" }),
-  ).toHaveAttribute("href", /0\.2\.2-beta1\.zip\.sha256$/);
+  ).toHaveAttribute("href", /0\.2\.3-beta1\.zip\.sha256$/);
   await expect(page.getByRole("tabpanel")).toContainText(
     "not installable APKs",
   );
@@ -45,7 +45,7 @@ test("theme search finds packs, preserves URLs and recovers from no matches", as
     page.getByRole("link", { name: /Midnight Express/ }),
   ).toHaveAttribute(
     "href",
-    /preview\/0\.2\.2-beta1\/themes\/packs\/midnight-express-v1\.zip$/,
+    /preview\/0\.2\.3-beta1\/themes\/packs\/midnight-express-v1\.zip$/,
   );
   await search.fill("nothing-matches-this");
   await expect(
@@ -88,7 +88,7 @@ test("resource tabs support keyboard navigation and project links stay available
     page.getByRole("link", { name: /Preview verification/ }),
   ).toHaveAttribute(
     "href",
-    /preview\/0\.2\.2-beta1\/verification\/BETA-0\.2\.2-beta1\.md$/,
+    /preview\/0\.2\.3-beta1\/verification\/BETA-0\.2\.3-beta1\.md$/,
   );
   await page.getByRole("searchbox").fill("website");
   await expect(page.locator(".project-card")).toHaveCount(1);
